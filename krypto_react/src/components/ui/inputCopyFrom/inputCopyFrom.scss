@@ -1,0 +1,158 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        top: 100%;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        top: 50%;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 0%;
+    }
+}
+
+.inputCopyFrom {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    display: block;
+    overflow: visible;
+    background: $white;
+    // color: $blue;
+    color: #7074fc;
+    text-decoration: none;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 100rem;
+    margin: 0;
+    transition: all 0.1s ease-in;
+    box-shadow: 0px 0px 20px $lblue2;
+    cursor: pointer;
+    &.blue {
+        background: $blue;
+        color: $white;
+    }
+
+    &.big {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 18px;
+    }
+
+    input {
+        display: block;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        &::-moz-selection {
+            /* Code for Firefox */
+
+            background: $white;
+        }
+
+        &::selection {
+            background: $white;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:disabled {
+            background-color: transparent;
+        }
+        background-color: transparent;
+    }
+    .copiedInfo {
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border-radius: 50px;
+        font-size: $text-super-small;
+        box-shadow: 0px 0px 20px $lblue2;
+        z-index: 10;
+        padding: 3px 10px;
+        line-height: 1em;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.3s;
+        margin: 0 10px;
+        color: $blue;
+        &.show {
+            animation: fade 2s forwards;
+        }
+    }
+    .inputCopyFromInner {
+        display: flex;
+        align-items: center;
+
+        .leftIcon {
+            display: flex;
+            align-items: center;
+            width: 50px;
+            text-align: left;
+            pointer-events: none;
+            span {
+                font-size: 100%;
+                font-weight: 400;
+                width: 100%;
+            }
+        }
+        .rightIcon {
+            display: flex;
+            align-items: center;
+            width: 50px;
+            text-align: right;
+            pointer-events: none;
+            span {
+                font-size: 100%;
+                font-weight: 400;
+                width: 100%;
+            }
+        }
+
+        .text {
+            font-size: $text-small;
+            font-weight: 500;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        // background: $blue;
+        background: #7074fc;
+        color: $white;
+        input {
+            color: $white;
+        }
+        .inputCopyFromInner {
+            .leftIcon {
+                span {
+                    animation: wobbleLeft 0.5s ease-in-out;
+                }
+            }
+            .rightIcon {
+                span {
+                    animation: wobbleRight 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

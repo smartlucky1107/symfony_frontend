@@ -1,0 +1,69 @@
+@import "./../../../colors";
+.redeemInside{
+    //width:340px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:calc(100vh - 500px);
+
+    .isNotLoggedIn{
+        background:$white;
+        border-radius:15px;
+        box-shadow:0px 0px 20px rgba($navy, 0.05);
+    }
+
+    .redeemInsideContent{
+        width:340px;
+
+        &.centerflex{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imgContainer{
+            width:125px;
+            margin-bottom:15px;
+
+            img{
+                animation: iconEntry 0.5s ease-in-out;
+            }
+        }
+        .textContainer{
+            text-align:center;
+            font-weight:600;
+            color:$blue;
+            background:$white;
+            border-radius:5px;
+            padding:20px;
+            box-sizing:border-box;
+            font-size:$text-large;
+
+            a{
+                margin-top:20px;
+                width:100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+@keyframes iconEntry{
+    0%{
+        transform: scale(0.5);
+        opacity:0;
+    }
+    40%{
+        transform: scale(1.1);
+        opacity:0.9;
+    }
+    60%{
+        transform: scale(0.9);
+        opacity:1;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+

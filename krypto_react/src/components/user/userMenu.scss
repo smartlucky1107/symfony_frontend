@@ -1,0 +1,41 @@
+@import "./../colors";
+
+.userMenu{
+  display:flex;
+
+  &>a {
+    display: flex;
+    align-items: center;
+    text-decoration:none;
+    color:inherit;
+
+    .userIcon {
+      width: 35px;
+      height: 35px;
+      border-radius: 100rem;
+      background: $lblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 18px;
+        color: $navy;
+      }
+
+      margin-right: 12px;
+    }
+
+    .userName {
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    &:hover{
+
+      .userName{
+        color:$blue;
+      }
+    }
+  }
+}

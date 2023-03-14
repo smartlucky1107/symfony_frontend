@@ -1,0 +1,185 @@
+@import "../../../../colors.scss";
+@import "../../../../responsiveBreakpoints.scss";
+
+.marketsContent {
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  @media #{$lg} {
+    margin-bottom: 40px;
+  }
+  .chartWrapper {
+    .chart {
+      max-height: 0;
+      overflow: hidden;
+
+      &.loaded {
+        max-height: 100px;
+      }
+    }
+  }
+  .marketsBox {
+    margin-top: 20px;
+    // margin-bottom: 20px;
+    @media #{$lg} {
+      // margin-bottom: 40px;
+    }
+    .marketsListHeader {
+      display: flex;
+      font-size: $text-small;
+      color: rgba($color: $navy, $alpha: 0.5);
+      font-weight: 600;
+      .wrapper {
+        margin-bottom: 9px;
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+        @media #{$lg} {
+          flex-basis: 40%;
+        }
+      }
+      .ratesWrapper {
+        margin-bottom: 9px;
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 100%;
+        @media #{$lg} {
+          flex-basis: 60%;
+        }
+        .marketRate {
+          flex: 0 0 50%;
+        }
+        .marketVolume {
+          flex: 0 0 50%;
+        }
+      }
+    }
+    .marketsList {
+      position: relative;
+      max-height: 176px;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.44, 0.99, 0.48, 1);
+      &.showAll {
+        max-height: 300px;
+      }
+      .box-placeholder {
+        .line {
+          margin-bottom: 3px;
+          height: 33px;
+        }
+      }
+      .market {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        // border-radius: 50px;
+        padding: 5px;
+        // margin-bottom: 7px;
+        width: 100%;
+        font-size: $text-small;
+        box-sizing: border-box;
+        // border: 1px solid $lblue2;
+        border-bottom: 1px solid $lblue2;
+        cursor: pointer;
+        &:last-child {
+          border-bottom: 0;
+        }
+        &:hover {
+          background-color: rgba($lblue2, 0.4);
+        }
+        &.active {
+          background-color: rgba($lblue2, 0.4);
+        }
+
+        .wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-basis: 100%;
+          text-decoration: none;
+          color: $navy;
+          font-weight: 600;
+          pointer-events: none;
+          @media #{$lg} {
+            flex-basis: 40%;
+          }
+          .marketName {
+            position: relative;
+            display: flex;
+            align-items: center;
+            img {
+              display: block;
+              width: 25px;
+              height: 25px;
+              margin-right: 14px;
+            }
+          }
+        }
+        .ratesWrapper {
+          display: flex;
+
+          align-items: center;
+          flex-basis: 100%;
+          text-decoration: none;
+          color: $navy;
+          font-weight: 600;
+          pointer-events: none;
+          @media #{$lg} {
+            flex-basis: 60%;
+          }
+          .marketRates {
+            display: flex;
+            flex: 0 0 50%;
+            .growth {
+              font-size: 8px;
+              display: flex;
+              align-items: center;
+              margin-left: 3px;
+              &.rise {
+                color: $green;
+                .material-icons {
+                  font-size: $text-small;
+                  color: $green;
+                }
+              }
+              &.loose {
+                color: $red;
+                .material-icons {
+                  font-size: $text-small;
+                  color: $red;
+                }
+              }
+            }
+          }
+          .marketVolume {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 0 0 50%;
+          }
+          .material-icons {
+            color: $blue;
+            font-size: $text-medium;
+          }
+        }
+      }
+    }
+    .btnShowMore {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      font-size: $text-super-small;
+      color: rgba($color: $navy, $alpha: 0.5);
+      cursor: pointer;
+      margin-left: auto;
+      margin-top: 10px;
+      span {
+        font-size: $text-small;
+        color: $blue;
+      }
+    }
+  }
+}

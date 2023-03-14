@@ -1,0 +1,49 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.tooltipWrapper {
+    position: relative;
+    &:hover {
+        .tooltip {
+            opacity: 1;
+        }
+    }
+    .tooltip {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        color: rgba($navy, 0.8);
+        font-weight: 500;
+        border-radius: 50px;
+        font-size: $text-super-small;
+        box-shadow: 0px 0px 20px $lblue2;
+        z-index: 10;
+        padding: 3px 10px;
+        line-height: 1em;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.3s;
+        margin: 0 10px;
+        &.top {
+            bottom: calc(100% + 5px);
+            left: 0;
+            transform: translateX(-50%);
+        }
+        &.bottom {
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &.left {
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+        }
+        &.right {
+            top: 50%;
+            right: calc(100% - 8px);
+            transform: translateY(-50%);
+        }
+    }
+}

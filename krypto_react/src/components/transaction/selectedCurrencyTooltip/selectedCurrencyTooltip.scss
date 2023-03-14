@@ -1,0 +1,19 @@
+@import "./../../colors";
+
+.selectedCurrencyDetails {
+  text-align: center;
+  color:$red;
+
+  .desc {
+    text-transform: uppercase;
+    margin-right: 2px;
+    display: inline-block;
+    font-size: 90%;
+    font-weight:500;
+  }
+
+  .amount {
+    display: inline-block;
+    font-weight: 600;
+  }
+}

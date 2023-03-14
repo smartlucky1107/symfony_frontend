@@ -1,0 +1,27 @@
+@import "./../../../colors";
+
+.userComponentLoader{
+    width:100%;
+    display:flex;
+    align-items: center;
+
+    .userPlaceholder{
+        @include loaderPlaceholder;
+        height:35px;
+        width:35px;
+        border-radius:100rem;
+
+        &.firstComponent{
+
+        }
+        &.secondComponent{
+            height:16px;
+            width:100px;
+            margin:0 10px;
+        }
+        &.thirdComponent{
+            height:26px;
+            width:26px;
+        }
+    }
+}

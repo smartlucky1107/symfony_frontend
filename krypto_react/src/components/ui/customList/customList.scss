@@ -1,0 +1,77 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+.customArrayList {
+    // min-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    @media #{$lg} {
+        width: 100%;
+    }
+    .customListHeader {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: $text-small;
+        color: rgba($navy, 0.5);
+        font-weight: 600;
+        margin-bottom: 9px;
+        padding: 0 10px;
+        .customListItemCol {
+            flex: 1 1;
+            &:last-of-type:not(:only-of-type) {
+                text-align: right;
+            }
+            &.time {
+                flex-grow: 0.3;
+            }
+            &.icon {
+                flex-grow: 0.1;
+            }
+        }
+    }
+    .customListItemRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 5px 10px;
+        margin-bottom: 7px;
+        width: 100%;
+        font-size: $text-small;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 20px $lblue2;
+        font-weight: 600;
+        text-decoration: none;
+        color: $navy;
+        &:hover {
+            background-color: $lblue2;
+        }
+        .customListItemCol {
+            flex: 1 1;
+            box-sizing: border-box;
+            line-height: 1.1em;
+            &:last-of-type:not(:only-of-type) {
+                text-align: right;
+            }
+            &.time {
+                flex-grow: 0.3;
+            }
+            &.icon {
+                flex-grow: 0.1;
+                .material-icons {
+                    font-size: $text-medium;
+                }
+            }
+            &.succes {
+                color: $green;
+            }
+            &.warning {
+                color: $yellow;
+            }
+            &.error {
+                color: $red;
+            }
+        }
+    }
+}

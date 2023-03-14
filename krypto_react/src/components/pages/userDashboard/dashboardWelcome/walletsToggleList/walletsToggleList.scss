@@ -1,0 +1,113 @@
+@import "../../../../colors.scss";
+@import "../../../../responsiveBreakpoints.scss";
+
+.walletsToggleListContent {
+    .titleBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // overflow: hidden;
+        .walletsAmount {
+            font-size: $text-super-small;
+            font-weight: 700;
+            color: $blue;
+            sup {
+                margin-left: 5px;
+                text-transform: uppercase;
+            }
+            .tooltip {
+                font-weight: 400;
+            }
+        }
+    }
+    .walletsBox {
+        overflow: hidden;
+        .walletsListHeader {
+            .wrapper {
+                @media #{$md} {
+                    flex-basis: 70%;
+                }
+                .walletName {
+                    margin-left: 15px;
+                }
+            }
+        }
+        .walletsList {
+            max-height: 218px;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.44, 0.99, 0.48, 1);
+            &.showAll {
+                max-height: 600px;
+            }
+            .wallet {
+                border: 1px solid $lblue2;
+                box-shadow: none;
+                &:hover {
+                    background-color: rgba($lblue2, 0.4);
+                }
+                .wraper {
+                    @media #{$md} {
+                        flex-basis: 70%;
+                    }
+                    @media #{$lg} {
+                        flex-basis: 100%;
+                    }
+                    @media #{$xl} {
+                        flex-basis: 70%;
+                    }
+                }
+                .walletName {
+                    font-size: $text-super-small;
+                    // margin-right: 10px;
+                }
+                .walletAmount {
+                    font-size: $text-super-small;
+                }
+
+                .btnBox {
+                    margin: 0 5px;
+                    @media #{$sm} {
+                        display: inline-block;
+                    }
+                    @media #{$md} {
+                        display: inline-block;
+                    }
+                    @media #{$lg} {
+                        display: none;
+                    }
+                    @media #{$xl} {
+                        display: inline-block;
+                    }
+                    &::after {
+                        right: -5px;
+                    }
+                    &:first-child {
+                        &::after {
+                            right: -5px;
+                        }
+                    }
+                    a {
+                        padding: 5px;
+                        span {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .btnShowMore {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            font-size: $text-super-small;
+            color: rgba($color: $navy, $alpha: 0.5);
+            cursor: pointer;
+            margin-left: auto;
+            margin-top: 10px;
+            span {
+                font-size: $text-small;
+                color: $blue;
+            }
+        }
+    }
+}

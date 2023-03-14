@@ -1,0 +1,55 @@
+@import "../../../colors";
+@import "../../../responsiveBreakpoints";
+
+.sidebar{
+  width:100%;
+  display:flex;
+
+  .kBtn{
+    flex:1;
+    background:transparent;
+    box-shadow:none;
+    color:$lnavy;
+    opacity:0.6;
+    padding:20px 25px;
+    border:none;
+
+    &:hover{
+      opacity:1;
+    }
+
+    .kBtnInner{
+      justify-content: center;
+
+      .leftIcon{
+        min-width:30px;
+        width:30px;
+        flex:none;
+
+        span{
+          font-weight:500;
+          font-size:$text-large;
+        }
+      }
+      .text{
+        font-weight:600;
+        text-transform: uppercase;
+        font-size:$text-medium;
+      }
+    }
+
+    &.active{
+      background:$white;
+      color:$blue;
+      border-radius: 15px 15px 0 0;
+      box-shadow:0px -15px 20px $lblue;
+      opacity:1;
+      position:relative;
+      border:none;
+
+      &:hover{
+        color:$blue;
+      }
+    }
+  }
+}

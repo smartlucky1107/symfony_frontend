@@ -1,0 +1,50 @@
+@import "./../../../../colors.scss";
+@import "./../../../../responsiveBreakpoints.scss";
+
+.referralEarnings {
+    margin-bottom: 1.66em;
+    @media #{$xl} {
+        margin-bottom: 0;
+    }
+    .referralFilterBar {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        // .searchRow {
+        // }
+        .referralNumber {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: $text-super-small;
+            color: rgba($navy, 0.5);
+            margin-bottom: 40px;
+            @media #{$sm} {
+                padding-top: 22.25px;
+            }
+            @media #{$md} {
+                padding-top: 0;
+            }
+            @media #{$lg} {
+                padding-top: 22.25px;
+            }
+            span {
+                color: $blue;
+                border: 1px solid $blue;
+                font-size: $text-small;
+                border-radius: 100rem;
+                padding: 9px 18px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .referralEarningsList {
+        margin-top: 20px;
+
+        a {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import "./../../../../colors.scss";
+@import "./../../../../responsiveBreakpoints.scss";
+
+.dashboardVerifyAccount {
+    > p {
+        @media #{$lg} {
+            margin-bottom: 40px;
+        }
+    }
+    p {
+        font-size: $text-small;
+        line-height: 2.6em;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+
+    .contentBox {
+        position: relative;
+        padding-left: 90px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px dashed rgba($navy, 0.4);
+
+        @media #{$md} {
+            padding-left: 110px;
+        }
+        @media #{$lg} {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+        }
+        &:last-child {
+            border-bottom: 0;
+            @media #{$lg} {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+        .contentIconBox {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .title {
+            font-size: $text-medium;
+            line-height: 1.3em;
+            font-weight: 600;
+            margin: 0 0 1em;
+        }
+    }
+}

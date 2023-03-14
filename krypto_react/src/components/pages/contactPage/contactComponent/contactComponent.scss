@@ -1,0 +1,115 @@
+@import "./../../../colors";
+@import "./../../../responsiveBreakpoints";
+
+.contactComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .contactOptions {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media #{$sm} {
+            flex-direction: row;
+        }
+
+    }
+
+    .contactOption {
+        //margin-bottom:40px;
+        border: 1px solid $lblue;
+        padding: 40px 30px;
+        box-sizing: border-box;
+        cursor:pointer;
+        transition: all 0.25s ease-in-out;
+        background:$white;
+
+        @media #{$sm}{
+            margin-bottom: 0px;
+            padding: 50px 60px;
+            //margin-right:70px;
+        }
+
+        &:hover{
+            border-color:$blue;
+            transform: scale(1.025);
+        }
+
+        &.aditionalInfos{
+            border-top:none;
+            cursor:default;
+            border: 1px solid $lblue;
+
+            &:hover{
+                border-color:$lblue;
+                transform: none;
+            }
+
+            .contactOptionDesc{
+                // display:flex;
+                flex-direction: column;
+                
+
+                @media #{$sm} {
+                    flex-direction: row;
+                }
+
+                .contactInfos{
+                    flex:1;
+
+                    @media #{$sm}{
+                        margin-right:50px;
+                    }
+                }
+                .companyInfos{
+                    margin-top:40px;
+                    width:100%;
+
+                    @media #{$sm}{
+                        width:auto;
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+            margin-bottom: 0px;
+        }
+
+        .contactOptionName {
+            font-weight: 600;
+            font-size: $text-big;
+            margin-bottom: 20px;
+        }
+
+        .contactOptionDesc {
+            width: 100%;
+            text-align: justify;
+            font-size: $text-small;
+            color: rgba($navy, 0.9);
+            font-weight: 400;
+            line-height:1.9em;
+        }
+
+        .contactOptionBtns {
+            margin-top: 20px;
+        }
+    }
+}
+
+.contactimgBlock{
+    display: flex;  
+}
+.imgContact{
+   max-width: 300px;
+   margin: auto;
+}
+@media only screen and (max-width: 600px) {
+    .imgContact{
+        max-width: 150px;
+     }  
+}

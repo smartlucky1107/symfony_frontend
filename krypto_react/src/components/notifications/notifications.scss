@@ -1,0 +1,47 @@
+@import "./../colors";
+
+.smallNotifications {
+
+  .notificationsBtn {
+    background: $lblue;
+    color: $blue;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 100rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:focus{
+      outline:none;
+    }
+
+    span {
+      font-size: 20px;
+    }
+
+    .notificationsNo {
+      position: absolute;
+      top: 75%;
+      right: 0;
+      z-index: 5;
+      background: $blue;
+      color: $white;
+      width: 13px;
+      height: 13px;
+      border-radius: 100rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 8px;
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+}

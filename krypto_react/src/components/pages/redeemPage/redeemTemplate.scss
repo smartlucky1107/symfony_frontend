@@ -1,0 +1,64 @@
+@import "./../../colors";
+
+.smsCodeWrapper {
+    display: flex;
+    justify-content: center;
+
+    .narrowContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .imgContainer {
+            width: 125px;
+            margin-top: 40px;
+            min-height: 125px;
+            img {
+                width: 100%;
+                animation: iconEntry 0.5s ease-in-out;
+            }
+        }
+        .topSection {
+            width: 340px;
+            max-width: 100%;
+            margin: 15px 0;
+            text-align: center;
+
+            .headerText {
+                font-size: $text-header;
+                font-weight: 600;
+                color: $blue;
+                margin-bottom: 20px;
+            }
+
+            .aditionalText {
+                font-size: $text-small;
+                font-weight: 500;
+                background: rgba($blue, 0.15);
+                border: 1px solid rgba($blue, 0.3);
+                color: $blue;
+                border-radius: 5px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@keyframes iconEntry {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    60% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

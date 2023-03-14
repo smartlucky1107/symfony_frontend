@@ -1,0 +1,43 @@
+@import "./../../colors";
+.phoneConfirmationModal{
+    .content{
+        p{
+            font-size:$text-small;
+        }
+
+        .smallContainer{
+            & > .text{
+                font-weight:600;
+                font-size:$text-medium;
+                margin:20px 0;
+            }
+
+            .errorText{
+                color:$red;
+                font-size:$text-small;
+                margin-top:10px;
+            }
+            .successText{
+                color:$blue;
+                font-weight:600;
+            }
+
+            button{
+                width:100%;
+                margin-top:20px;
+            }
+
+            .changePhone{
+                color:$navy;
+                font-weight:600;
+                font-size:$text-super-small;
+                margin-top:15px;
+                cursor:pointer;
+
+                &:hover{
+                    color:$blue;
+                }
+            }
+        }
+    }
+}

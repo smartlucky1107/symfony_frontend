@@ -1,0 +1,46 @@
+@import "./../../../../colors";
+
+.sellTransactionIHaveCurrencySelectorWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:20px;
+
+    &.hide{
+        display:none;
+    }
+}
+
+.sellTransactionIHaveCurrencySelector {
+    width: 100%;
+    max-height: calc(3 * 38px + 20px);
+    overflow: hidden;
+    position:relative;
+    transition: max-height 0.25s ease-in-out;
+
+    &.showMore{
+        max-height: 1000px;
+        transition: max-height 0.25s ease-in-out;
+    }
+
+    .pendingRequest{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:rgba($white,0.5);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sellTransactionIHaveCurrencySelectorLabel {
+        color: #5e62ec;
+        font-size: $text-small;
+        margin-bottom: 5px;
+        font-weight: 500;
+        cursor: default;
+        user-select: none;
+    }
+}

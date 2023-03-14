@@ -1,0 +1,140 @@
+@import "./../../colors";
+
+.kBtn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    overflow: auto;
+    background: $white;
+    color: $blue;
+    text-decoration: none;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 100rem;
+    margin: 0;
+    transition: all 0.1s ease-in;
+    box-shadow: 0px 0px 20px $lblue2;
+    overflow-x: hidden;
+
+    .kBtnInner {
+        display: flex;
+        align-items: center;
+
+        .leftIcon {
+            display: flex;
+            align-items: center;
+            min-width: 50px;
+            flex: 1;
+            text-align: left;
+
+            span {
+                font-size: 100%;
+                font-weight: 400;
+                width: 100%;
+            }
+        }
+        .rightIcon {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            min-width: 50px;
+            flex: 1;
+            text-align: right;
+
+            span {
+                font-size: 100%;
+                font-weight: 400;
+                width: 14px;
+                text-align: right;
+            }
+        }
+
+        .text {
+            font-size: $text-small;
+            font-weight: 500;
+        }
+    }
+    &.hidden {
+        display: none;
+    }
+    &.blue {
+        background: $blue;
+        color: $white;
+    }
+    &.warning {
+        background: $yellow;
+        color: $white;
+        &:hover {
+            cursor: pointer;
+            background: $yellow;
+            color: $white;
+        }
+    }
+    &.big {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 18px;
+    }
+    &.thin {
+        padding: 6px 18px;
+    }
+    &.small {
+        padding: 5px 10px;
+
+        .kBtnInner {
+            .text {
+                font-size: $text-super-small;
+            }
+        }
+    }
+    &.active {
+        cursor: pointer;
+        color: $blue;
+        background: $white;
+        border: 1px solid $blue;
+    }
+    &:hover {
+        cursor: pointer;
+        background: $blue;
+        color: $white;
+
+        .kBtnInner {
+            .leftIcon {
+                span {
+                    animation: wobbleLeft 0.5s ease-in-out;
+                }
+            }
+            .rightIcon {
+                span {
+                    animation: wobbleRight 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.smallBackBtn {
+        background: $lblue !important;
+        color: rgba($navy, 0.4);
+        padding: 0;
+        border-radius: 0;
+        padding: 5px 10px;
+        background: transparent;
+        .text {
+            line-height: 100%;
+        }
+
+        &:hover {
+            color: rgba($navy, 1);
+        }
+    }
+    &.disabled {
+        background: rgba($navy, 0.5);
+        cursor: no-drop;
+    }
+}

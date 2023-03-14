@@ -1,0 +1,436 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.kInput {
+    position: relative;
+
+    label {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        color: $blue;
+        font-size: $text-small;
+        font-weight: 500;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+    }
+
+    .helpTooltip {
+        color: rgba($navy, 0.3);
+        margin-left: 5px;
+
+        span {
+            font-size: $text-medium;
+        }
+
+        .helpTooltipText {
+            background: $white;
+            box-sizing: border-box;
+            padding: 3px 5px;
+            border: 1px solid rgba($navy, 0.1);
+            border-radius: 5px;
+            display: none;
+            position: absolute;
+            z-index: 101;
+            font-size: $text-super-small;
+            color: rgba($navy, 0.7);
+        }
+
+        &:hover {
+            span {
+                color: rgba($navy, 0.7);
+            }
+
+            .helpTooltipText {
+                display: block;
+            }
+        }
+    }
+
+    .invalidAmount {
+        display: none;
+    }
+
+    .kInputInside {
+        position: relative;
+        background: $white;
+        display: flex;
+        border-radius: 5px;
+        border: 2px solid $lblue;
+        box-sizing: border-box;
+        transition: all 0.25s ease-in-out;
+
+        .loading {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: calc(100% - 80px);
+            height: 100%;
+            background: rgba($white, 1);
+            border-radius: 3px 0 0 3px;
+            padding-left: 15px;
+            z-index: 3;
+
+            &.hide {
+                display: none;
+            }
+
+            .dots {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                animation: dotsAnim 2s linear infinite;
+
+                .dot {
+                    background: rgba($blue, 1);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100rem;
+
+                    &.dot1 {
+                        animation: dotAnim 1s ease-in-out infinite;
+                        opacity: 0.5;
+                        animation-delay: 0.6s;
+                    }
+
+                    &.dot2 {
+                        animation: dotAnim2 1s ease-in-out infinite;
+                        animation-delay: 0.3s;
+                    }
+                }
+            }
+
+            @keyframes dotsAnim {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateX(25px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+            @keyframes dotAnim {
+                0% {
+                    transform: translateX(0);
+                    opacity: 0.5;
+                }
+                50% {
+                    transform: translateX(20px);
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 0.5;
+                }
+            }
+            @keyframes dotAnim2 {
+                0% {
+                    transform: translateX(0);
+                }
+                50% {
+                    transform: translateX(15px);
+                    opacity: 0.5;
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            background: transparent;
+            color: $navy;
+            font-size: $text-medium;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            padding: 8px 14px;
+            z-index: 2;
+            //border-radius:5px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &.big {
+                font-size: $text-big;
+            }
+
+            &.weight700 {
+                font-weight: 700;
+            }
+
+            &.hasChildren {
+                width: calc(100% - 80px);
+                border-radius: 5px 0 0 5px;
+            }
+
+            &.hidden {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        .copiedToClipboard {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: $white;
+            box-shadow: 0px 0px 15px rgba($navy, 0.2);
+            border-radius: 100rem;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: $text-small;
+            font-weight: 600;
+            opacity: 0;
+            animation: copiedToClipboardAnim 1s ease-in-out;
+            z-index: 999;
+
+            span {
+                font-size: $text-small;
+                margin-right: 5px;
+            }
+        }
+
+        .copyToClipboard {
+            width: 45px;
+            background: $lblue;
+            border: none;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            cursor: pointer;
+
+            span {
+                color: rgba($navy, 0.5);
+                font-size: $text-large;
+            }
+
+            &:hover {
+                span {
+                    color: rgba($navy, 1);
+                }
+            }
+        }
+
+        .hiddenBox {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            background: $lblue;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: $text-small;
+            font-weight: 500;
+            color: rgba($navy, 0.7);
+        }
+
+        &:hover {
+            .hiddenBox {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            background: rgba($blue, 1);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            z-index: 2;
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+
+    &.checkbox {
+        display: flex;
+        align-items: center;
+
+        input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        label {
+            margin-bottom: 0;
+            padding-left: 30px;
+            box-sizing: border-box;
+            position: relative;
+            cursor: pointer;
+            font-size: $text-small;
+            color: $blue;
+            line-height: 1.7em;
+
+            &:hover {
+                .kBox {
+                    span {
+                        opacity: 0.15;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: underline;
+                font-weight: 600;
+                color: $blue;
+            }
+
+            .labelText {
+                padding-top: 1px;
+                padding-bottom: 1px;
+            }
+
+            .kBox {
+                position: absolute;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 5px;
+                border: 2px solid $lblue2;
+                &.disabled {
+                    pointer-events: none;
+                }
+                span {
+                    font-size: 16px;
+                    font-weight: 800;
+                    opacity: 0;
+                }
+
+                &.checked {
+                    span {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .isRequired {
+        font-size: 70%;
+        font-weight: 600;
+        margin-left: 5px;
+        color: $red;
+        display: inline-flex;
+        align-items: center;
+        line-height: 1em;
+        position: relative;
+        opacity: 0.5;
+
+        span {
+            font-size: 150%;
+        }
+
+        .isRequiredText {
+            display: none;
+            background: $red;
+            color: $white;
+            padding: 3px 5px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: absolute;
+            left: 100%;
+        }
+
+        &:hover {
+            opacity: 1;
+
+            .isRequiredText {
+                display: block;
+            }
+        }
+    }
+
+    .inputError {
+        color: $white;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 3px 5px;
+        border-radius: 0 0 3px 3px;
+        font-size: $text-super-small;
+        background: $red;
+    }
+
+    .inputMinMax {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        //background:rgba($white, 1);
+        padding: 3px 10px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-size: $text-super-small;
+        opacity: 1;
+        transition: opacity 0.25s ease-in-out;
+        z-index: 5;
+    }
+
+    &.error {
+        .kInputInside {
+            border-color: $red;
+            border-radius: 3px 3px 0 0;
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &.active {
+        .kInputInside {
+            overflow: hidden;
+            border-color: rgba($blue, 1);
+
+            &::before {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                opacity: 0;
+                border-radius: 100rem;
+            }
+        }
+    }
+
+    &.invalid {
+        .invalidAmount {
+            margin-left: 15px;
+            font-size: $text-super-small;
+            font-weight: 600;
+            color: rgba($red, 0.8);
+            text-transform: uppercase;
+            position: absolute;
+            align-self: center;
+            display: block;
+            cursor: default;
+            user-select: none;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes copiedToClipboardAnim {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}

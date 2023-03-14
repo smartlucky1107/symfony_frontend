@@ -1,0 +1,83 @@
+@import "./../../colors.scss";
+@import "./../../responsiveBreakpoints.scss";
+.rIcon {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border-color: rgba($color: $navy, $alpha: 0.3);
+    line-height: 1em;
+    &.rIconDashed {
+        // &::before {
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   width: 0;
+        //   height: 0;
+        //   border-radius: 50%;
+        //   content: "";
+        //   background: $navy;
+        //   transition: 0.3s;
+        // }
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border: 1px dashed;
+            border-color: rgba($color: $navy, $alpha: 0.3);
+            border-radius: 50%;
+            content: "";
+            transition: 0.3s;
+        }
+        &:hover {
+            //   &::before {
+            //     width: 50%;
+            //     height: 50%;
+            //   }
+            &::after {
+                width: 80%;
+                height: 80%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    }
+    &.small {
+        width: 58px;
+        height: 58px;
+        .material-icons {
+            font-size: 24px;
+        }
+    }
+    &.medium {
+        width: 66px;
+        height: 66px;
+        @media #{$md} {
+            width: 86px;
+            height: 86px;
+        }
+        .material-icons {
+            font-size: 26px;
+            @media #{$md} {
+                font-size: 32px;
+            }
+        }
+    }
+    &.big {
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        &.iconBox {
+        }
+        &.iconContentBox {
+            font-size: 32px;
+            font-weight: 600;
+        }
+    }
+}

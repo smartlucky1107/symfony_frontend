@@ -1,0 +1,41 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.transactionPage{
+  width:100%;
+
+  .container {
+
+    &.minHeightContainer{
+      min-height:calc(100vh - 480px);
+    }
+
+    .transactionContainer {
+      margin: 60px auto 100px auto;
+
+
+      .buySellContainer {
+        width: 100%;
+        box-shadow: 0px 0px 30px $lblue;
+        //border-top:3px solid $blue;
+        box-sizing: border-box;
+        //border-radius: 0 0 15px 15px;
+
+        .kBtn {
+          &.blue {
+            width: 100%;
+            //padding: 13px 18px;
+
+            .kBtnInner {
+              justify-content: center;
+
+              .text {
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

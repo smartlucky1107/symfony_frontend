@@ -1,0 +1,158 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.paymentSelector{
+    padding:20px 20px 20px 20px;
+
+    .infobox{
+        margin-bottom:10px;
+    }
+}
+
+.paymentError{
+    padding: 20px;
+    box-sizing:border-box;
+    text-align:center;
+    color:$red;
+    font-weight:600;
+}
+
+.paymentStarted{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    padding:40px;
+    box-sizing: border-box;
+
+    .paymentMainText{
+        font-size:$text-super-small;
+        font-weight:500;
+        text-transform: uppercase;
+        text-align:center;
+        color:rgba($blue, 0.8);
+        border:1px solid rgba($blue, 0.15);
+        background:rgba($blue, 0.2);
+        border-radius:5px;
+        padding:20px 10px;
+        box-sizing:border-box;
+
+        strong{
+            color:$blue;
+            text-transform: none;
+            font-size:$text-big;
+            display:inline-block;
+            margin-bottom:5px;
+        }
+    }
+
+    .paymentDetails{
+        margin-top:15px;
+        display:flex;
+        flex-direction: column;
+        border:1px solid rgba($navy, 0.05);
+        border-radius:5px;
+        padding:15px 0 0 0;
+
+        .paymentDetailsHeader{
+            font-weight:600;
+            text-transform: uppercase;
+            font-size:$text-small;
+            border-bottom:1px dashed rgba($navy, 0.1);
+            padding-bottom:15px;
+            text-align:center;
+        }
+        .paymentDetailsRow{
+            display:flex;
+            justify-content: space-between;
+            font-size:$text-medium;
+            padding:10px 0;
+            border-bottom:1px dotted rgba($navy, 0.1);
+
+            &:last-child{
+                border-bottom:none;
+            }
+
+            .text-left{
+                padding-left:15px;
+            }
+            .text-right{
+                padding-right:15px;
+            }
+        }
+        small{
+            font-size:70%;
+            opacity:0.7;
+        }
+        .bold{
+            font-weight:600;
+        }
+
+        .paymentDetailsProcessor{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+            .paymentDetailsProcessorText{
+                font-size: $text-super-small;
+                text-transform: uppercase;
+                letter-spacing:0.05em;
+                font-weight:500;
+                opacity:0.5;
+            }
+            img{
+                width:80px;
+            }
+        }
+    }
+}
+
+.paymentRedirectBox{
+    margin-top:40px;
+
+    .paymentRedirectBoxText{
+        font-size: $text-small;
+        text-align: center;
+        color:rgba($navy, 0.4);
+        font-weight:500;
+    }
+    .paymentRedirectBoxBar{
+        width:100%;
+        height:10px;
+        background:$lblue;
+        border-radius:100rem;
+        margin:15px 0;
+        position:relative;
+
+        .paymentRedirectBoxBarInside{
+            background:linear-gradient(90deg, $blue2 -30%, $blue, $blue3 130%);
+            width:0%;
+            position:absolute;
+            left:0;
+            top:0;
+            height:100%;
+            border-radius: 100rem;
+            animation: animateLoader 5s linear 1;
+        }
+
+        @keyframes animateLoader {
+            0%{
+                width:100%;
+            }
+            100%{
+                width:0%;
+            }
+        }
+    }
+    .paymentRedirectBoxBtns{
+        width:100%;
+
+        a{
+            width:100%;
+            box-sizing: border-box;
+
+            .kBtnInner{
+                justify-content: center;
+            }
+        }
+    }
+}

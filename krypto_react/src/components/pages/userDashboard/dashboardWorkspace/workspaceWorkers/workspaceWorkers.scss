@@ -1,0 +1,56 @@
+@import "./../../../../colors.scss";
+@import "./../../../../responsiveBreakpoints.scss";
+
+.workspaceWorkers {
+  .searchRow {
+    display: flex;
+    justify-content: space-between;
+    .searchContainer {
+      margin: 10px 0;
+    }
+    .addNew {
+      margin: 10px 0;
+    }
+  }
+  .workersList {
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: space-between;
+    // align-items: space-between;
+    margin-top: 20px;
+    .box-placeholder-wrapper {
+      .box {
+        min-height: 84px;
+        margin-bottom: 0;
+      }
+    }
+    > div {
+      flex-basis: calc(100%);
+
+      @media #{$sm} {
+        flex-basis: calc(50% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      @media #{$md} {
+        flex-basis: calc(33.3% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      @media #{$xl} {
+        margin: 0 0 20px;
+        flex-basis: 32%;
+      }
+      &.infobox {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+.addbtn{
+  margin: 20px 10px;
+  text-align: right;
+}
+.p10 .kInput{
+  padding: 10px;
+}

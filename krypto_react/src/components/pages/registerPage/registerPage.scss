@@ -1,0 +1,127 @@
+@import "../../colors.scss";
+
+.registerPage {
+    .container {
+        justify-content: center;
+        align-items: center;
+
+        .narrowContainer {
+            margin: 60px 0;
+
+            .registerType {
+                width: 100%;
+                box-shadow: 0px 0px 30px $lblue;
+                //border-top:3px solid $blue;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .registerForm {
+        position: relative;
+        width: 100%;
+        padding: 30px 40px 40px 40px;
+        box-sizing: border-box;
+
+        .kInput {
+            margin-bottom: 15px;
+        }
+
+        .infobox {
+            margin-bottom: 15px;
+        }
+
+        .reCaptchaBox {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            height: 110px;
+            margin-bottom: 15px;
+            border: 1px dashed rgba($navy, 0.1);
+            box-sizing: border-box;
+            border-radius: 5px;
+            transition: all 0.5s ease-in-out;
+
+            &.hide {
+                margin-bottom: 0;
+                height: 0;
+                padding: 0;
+                border: 1px solid transparent;
+                overflow: hidden;
+            }
+
+            .recaptchaContainer {
+                overflow: hidden;
+            }
+        }
+    }
+
+    .registerSuccessImg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        img {
+            width: 120px;
+        }
+    }
+    .registerSuccess {
+        padding: 30px 40px;
+        box-shadow: 0px 0px 40px rgba($navy, 0.1);
+        border-radius: 5px;
+
+        .registerSuccessHeader {
+            font-weight: 700;
+            color: $navy;
+            font-size: $text-big;
+            text-align: center;
+        }
+        .registerSuccessContent {
+            font-size: $text-medium;
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+}
+.w2{
+    width: 200px;
+}
+img {
+    max-width: 100%;
+}
+.alignSelf{
+    align-self: center;
+}
+.sidebar .kBtn.active {
+    background: #ffffff;
+    color: #797fff!important;
+}
+.sidebar .kBtn .kBtnInner .text {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px!important;
+}
+.kSelect .selectedElement:hover {
+    background: #f8f8fa;
+    color: #4f54e4!important;
+}
+.kSelect .label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #4f54e4!important;
+}
+.kSelect .selectedElement, .kInput.checkbox label { 
+    color: #4f54e4!important;
+}
+.kSelect .optionsList::-webkit-scrollbar-thumb {
+    background: #6166f8!important;
+    border-radius: 10px;
+}
+.kSelect .optionsList .kOption {
+    justify-content: left!important;
+}
+.h900{
+    min-height:900px;
+}

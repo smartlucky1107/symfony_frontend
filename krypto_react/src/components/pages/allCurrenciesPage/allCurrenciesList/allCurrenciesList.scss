@@ -1,0 +1,38 @@
+@import "./../../../colors";
+@import "./../../../responsiveBreakpoints";
+
+.allCurrenciesList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        box-sizing: border-box;
+        font-size: $text-super-small;
+        color: $navy;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @media #{$sm} {
+            font-size: $text-small;
+        }
+
+        .headerCol {
+            flex: 2;
+
+            &.priceChange {
+                flex: 1;
+                text-align:right;
+            }
+
+            &.priceBuy, &.priceSell {
+                text-align: right;
+                padding-right:10px;
+            }
+        }
+    }
+}

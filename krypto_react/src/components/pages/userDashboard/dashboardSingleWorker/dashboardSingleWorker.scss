@@ -1,0 +1,146 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.dashboardSingleWorker {
+    .row {
+        .col {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+
+            @media #{$md} {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+
+    .disableEmployeeButtonBox {
+        @media #{$xl} {
+            text-align: right;
+        }
+    }
+
+    .wallet {
+        &:hover {
+            .btnBox {
+                a {
+                    // color: $blue;
+                    color: #5b60ff;
+                }
+            }
+        }
+    }
+    .flexTable {
+        form {
+            display: flex;
+            font-weight: 600;
+            // margin-top: 6px;
+            // padding-top: 6px;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 100%;
+            flex-flow: row wrap;
+            .kInput {
+                margin-top: 6px;
+                padding-top: 6px;
+            }
+            .kBtn {
+                margin-top: 6px;
+                // padding-top: 6px;
+            }
+        }
+        .ftRow {
+            &:last-child {
+                border-top: none;
+            }
+            .errorTooltip {
+                flex-basis: 100%;
+            }
+        }
+        .infobox {
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .ftCol {
+            .kInput.checkbox {
+                label {
+                    padding-left: 19px;
+                    margin-top: -19px;
+                }
+            }
+            .kInput {
+                .kInputInside {
+                    input {
+                        max-width: 160px;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-bottom: 30px;
+        @media #{$xl} {
+            margin-bottom: 45px;
+        }
+    }
+    .currenciesList {
+        .currenciesListHeader {
+            display: flex;
+            justify-content: space-between;
+            font-size: $text-super-small;
+            color: rgba($color: $navy, $alpha: 0.5);
+            font-weight: 600;
+            .material-icons {
+                font-size: $text-large;
+            }
+            .form {
+                flex-basis: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                .checkboxNames {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 110px;
+                    > div {
+                        margin: 0 20px 0 0;
+                        &:first-child {
+                            margin: 0 22px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+        .currenciesListBody {
+            max-height: 170px;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            padding-right: 5px;
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 2px $blue;
+                border-radius: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $blue;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: darken($blue, 10%);
+            }
+            .form {
+                .kInput.checkbox {
+                    label {
+                        margin-top: -20px;
+                    }
+                }
+            }
+        }
+    }
+}

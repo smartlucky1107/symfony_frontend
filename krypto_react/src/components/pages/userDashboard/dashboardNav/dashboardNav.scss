@@ -1,0 +1,99 @@
+@import "../../../colors.scss";
+@import "../../../responsiveBreakpoints.scss";
+
+.dashboardNav {
+    display: none;
+    max-width: 100%;
+    overflow-y: scroll;
+    @media #{$sm} {
+        display: block;
+    }
+    @media #{$lg} {
+        overflow-y: visible;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        @media #{$lg} {
+            display: block;
+        }
+        li {
+            margin-right: 15px;
+            margin-bottom: 15px;
+            @media #{$lg} {
+                margin-right: 5px;
+            }
+            &:last-child {
+                .kBtn {
+                    max-width: 150px;
+                    box-sizing: border-box;
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+            }
+            .kBtn {
+                display: block;
+                .kBtnInner {
+                    display: block;
+
+                    @media #{$lg} {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .text {
+                        display: none;
+                        @media #{$lg} {
+                            display: block;
+                        }
+                    }
+                    .rightIcon {
+                        width: 15px;
+                        min-width: auto;
+                        @media #{$lg} {
+                            width: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.sidebarBtn{
+    min-height: 35px;
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+}
+.sidebarBtn:hover{
+    background: #6267ff!important;
+}
+.sidebarBtn.active:hover{
+    background: #fff!important;
+}
+.sidebarBtn .kBtnInner{
+    display: block!important;
+    text-align: center;
+    position: relative;
+}
+.sidebarBtn .rightIcon {
+    margin: 0!important;
+    display: block!important;
+    text-align: center!important;
+    width: 100%!important;
+}
+.sidebarBtn .kBtnInner .text {
+    position: absolute;
+    bottom: 0;
+    top: 100%;
+    width: 100%;
+}
+.power{
+    width: 100%;
+    max-width: 100%!important;
+    height: 50px; 
+}
+.power .kBtnInner{
+   margin-top: -14px;
+}

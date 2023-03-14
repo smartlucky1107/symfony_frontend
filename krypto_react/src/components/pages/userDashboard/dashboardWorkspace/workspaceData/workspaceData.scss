@@ -1,0 +1,171 @@
+@import "./../../../../colors.scss";
+@import "./../../../../responsiveBreakpoints.scss";
+
+.workspaceData {
+  .row {
+    justify-content: space-between;
+    .col {
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      box-sizing: border-box;
+
+      @media #{$md} {
+        flex: 0 0 50%;
+        max-width: 50%;
+        // flex-basis: 50%;
+        // &:first-child {
+        //     padding-right: 15px;
+        // }
+        // &:last-child {
+        //     padding-left: 15px;
+        // }
+      }
+      @media #{$xl} {
+        // &:first-child {
+        //     padding-right: 30px;
+        // }
+        // &:last-child {
+        //     padding-left: 30px;
+        // }
+      }
+    }
+  }
+  .content {
+    margin-bottom: 30px;
+    @media #{$xl} {
+      margin-bottom: 45px;
+    }
+    .title {
+      font-size: $text-medium;
+      line-height: 1.3em;
+      font-weight: 600;
+      margin: 0 0 1em;
+    }
+  }
+  .flexTable {
+    form {
+      display: flex;
+      font-weight: 600;
+      margin-top: 6px;
+      padding-top: 6px;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 100%;
+      flex-flow: row wrap;
+    }
+    .ftRow {
+      &:last-child {
+        border-top: none;
+      }
+      .errorTooltip {
+        flex-basis: 100%;
+      }
+    }
+    .infobox {
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+    .ftCol {
+      .kInput {
+        margin-bottom: 10px;
+      }
+      .kInput.checkbox {
+        label {
+          margin-top: -20px;
+        }
+      }
+      .kInput {
+        .kInputInside {
+          input {
+            max-width: 160px;
+          }
+        }
+      }
+    }
+  }
+
+  .twoFactor {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    &.show {
+      max-height: 1000px;
+    }
+    .tfab1 {
+      img {
+        max-width: 110px;
+        margin-right: 10px;
+      }
+    }
+    .qr {
+      text-align: center;
+      .qrCode {
+        margin-bottom: 5px;
+      }
+      .secretCode {
+        margin-bottom: 15px;
+      }
+      .authCode {
+        margin-bottom: 5px;
+        .kInput {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+.red{
+  color: red;
+}
+.ml5{
+  margin-left: 5px;
+}
+.greenFeel{
+  background: #a9fea9;
+    border-radius: 50px;
+    color: #006e00;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.lightBtn{
+  padding: 10px 50px!important;
+}
+.lightBtn:hover{
+ background: transparent!important;
+ color: #6d71ee!important;
+}
+.lightBtn.red{
+  color: red!important;
+}
+.text-right{
+  text-align: right;
+}
+.em-info-list{
+  overflow-y: auto;
+  height: 200px;
+}
+.x-center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.emmpimg{
+  padding-top: 4rem;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .lightBtn{
+    padding: 10px 30px!important;
+  }
+  .text-right {
+    text-align: left;
+    margin-top: 1rem;
+}
+}

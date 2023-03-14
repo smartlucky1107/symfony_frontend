@@ -1,0 +1,233 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.dashboardSingleWallet {
+    .popupWrapper {
+        position: absolute;
+    }
+    .stdDashboardHeader {
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 25px;
+            padding: 0 5px 0 15px;
+        }
+    }
+    .col {
+        flex-basis: 100%;
+        @media #{$md} {
+            flex-basis: 50%;
+        }
+    }
+    .sellBuyBtns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-flow: column wrap;
+        .kBtn {
+            margin-bottom: 15px;
+        }
+    }
+
+    .walletData {
+        &.walletDataDeposit {
+            margin-top: 15px;
+            @media #{$md} {
+                margin-top: 0;
+                text-align: right;
+            }
+            .tooltipWrapper {
+                display: inline-block;
+            }
+        }
+        .text {
+            color: rgba($navy, 0.5);
+            font-size: $text-small;
+        }
+        .walletFreeAmount {
+            font-size: 25px;
+            font-weight: 600;
+            span {
+                color: rgba($navy, 0.5);
+                font-size: $text-medium;
+                margin-left: 5px;
+            }
+            .box-placeholder-wrapper {
+                margin-top: 5px;
+                .box-placeholder {
+                    .line {
+                        margin-bottom: 5px;
+                        &:first-child {
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .walletDepositSaldo {
+            font-size: 25px;
+            font-weight: 600;
+            span {
+                color: rgba($navy, 0.5);
+                font-size: $text-medium;
+                margin-left: 5px;
+            }
+        }
+        .walletAmountPending {
+            font-size: $text-small;
+            font-weight: 500;
+            color: rgba($navy, 0.5);
+            display: flex;
+            align-items: center;
+            span {
+                font-size: $text-small;
+                padding-right: 5px;
+            }
+        }
+        .walletAmountLeftWrapper {
+            display: block;
+        }
+        .walletAmountLeft {
+            font-size: $text-small;
+            font-weight: 500;
+            color: rgba($navy, 0.5);
+            display: flex;
+            align-items: center;
+            span {
+                font-size: $text-small;
+                padding-right: 5px;
+            }
+        }
+    }
+    .tabs {
+        position: relative;
+        .box-placeholder-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            .box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 56px;
+                height: 100%;
+            }
+        }
+    }
+
+    .transferTitle {
+        text-align: center;
+        margin: 15px 0;
+        .infobox {
+            font-size: $text-large;
+            font-weight: 700;
+            span {
+                display: block;
+                line-height: 1em;
+                font-weight: 400;
+                font-size: $text-small;
+            }
+        }
+    }
+    .bankBic {
+        font-size: $text-medium;
+        font-weight: 600;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .bankAccountNumber {
+        text-align: center;
+        font-weight: 600;
+        font-size: $text-medium;
+        .inputCopyFrom {
+            min-width: 320px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    }
+
+    .depositInfo {
+        font-size: $text-super-small;
+        margin: 15px 0;
+    }
+    .recipientData {
+        text-align: center;
+        margin: 15px 0;
+        .infobox {
+            font-size: $text-medium;
+            span {
+                display: block;
+                line-height: 1em;
+                font-weight: 400;
+                font-size: $text-small;
+            }
+        }
+    }
+    .aditionalInfos {
+        margin: 15px 0;
+        text-transform: uppercase;
+        font-size: $text-super-small;
+        text-align: center;
+    }
+    .content {
+        width: 100%;
+        margin-bottom: 30px;
+        @media #{$xl} {
+            margin-bottom: 45px;
+        }
+        .infobox {
+            margin-top: 20px;
+        }
+    }
+    .spec {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        margin-top: 2em;
+        .wallets-list-short {
+            margin-right: 15px;
+            display: none;
+            @media #{$lg} {
+                display: block;
+                // flex-basis: 83px;
+                min-width: 83px;
+            }
+            .wraper {
+                .walletName {
+                    img {
+                        margin-right: 8px;
+                    }
+                }
+            }
+            .wallet {
+                text-decoration: none;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+                &.active {
+                    // background-color: $blue;
+                    // border-color: $blue;
+                    border-color: #6d71ee;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        > .row {
+            width: auto;
+        }
+    }
+}
+.wallets-list-short {
+    display: inline-flex!important;
+    margin-bottom: 20px!important;
+}
+.dashboardSingleWallet .spec {
+    display: block!important;
+    
+}

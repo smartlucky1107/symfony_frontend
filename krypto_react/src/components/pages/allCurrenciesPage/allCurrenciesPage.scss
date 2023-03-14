@@ -1,0 +1,27 @@
+.allCryptocurrenciesPage{
+  .searchContainer{
+    margin: 20px 0 30px;
+    width:400px;
+    max-width:100%;
+  }
+}
+.topBtnSearch{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topBtnSearch .kInput .kInputInside input {
+  padding: 8px 14px!important;
+}
+.kBtn {
+  color: #5e62ec;
+}
+.listCurrencyTable .allCurrenciesList {
+  min-height: 300px;
+}
+.allCurrenciesList .header {
+  color: #5e62ec!important;
+}
+.kInput.active .kInputInside{
+  border-color:#5e62ec!important;
+}

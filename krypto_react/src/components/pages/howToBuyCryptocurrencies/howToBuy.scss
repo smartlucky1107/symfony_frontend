@@ -1,0 +1,105 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.howToBuy {
+    .whatDoINeed {
+        margin-top: 2em;
+    }
+    .miniSection {
+        margin-top: 2em;
+    }
+    ul {
+        li {
+            &.anchor {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .createAccountSteps {
+        position: relative;
+        // margin-top: 6em;
+
+        .createAccountStep {
+            position: relative;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            padding-top: 3em;
+            padding-left: 15px;
+            @media #{$md} {
+                padding-left: 60px;
+            }
+            &::before {
+                position: absolute;
+                top: calc(3em + 40px);
+                left: 0;
+                border-left: 2px dashed $blue;
+                content: "";
+                width: 2px;
+                height: 100%;
+            }
+            &::after {
+                position: absolute;
+                top: calc(3em + 40px);
+                left: 0;
+                border-top: 2px dashed $blue;
+                content: "";
+                width: 50%;
+                height: 2px;
+            }
+            &:last-child {
+                &::before {
+                    display: none;
+                }
+            }
+            .stepImg {
+                flex-basis: 100%;
+                text-align: center;
+            }
+            .stepCount {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $blue;
+                text-transform: uppercase;
+                box-sizing: border-box;
+                font-size: $text-big;
+                font-weight: 900;
+                padding: 20px 10px;
+                border-radius: 50%;
+                text-align: center;
+                width: 80px;
+                height: 80px;
+                margin-bottom: 2em;
+                background-color: #fff;
+                z-index: 1;
+            }
+
+            &.step1 {
+                position: relative;
+                .stepCount {
+                    position: relative;
+                    // &::after {
+                    //     position: absolute;
+                    //     top: calc(50% - 2px);
+                    //     left: 100%;
+                    //     border-top: 2px dashed $blue;
+                    //     content: "";
+                    //     width: 100%;
+                    //     height: 2px;
+                    // }
+                    // &::before {
+                    //     position: absolute;
+                    //     top: calc(50% - 2px);
+                    //     right: calc(-100% - 2px);
+                    //     border-left: 2px dashed $blue;
+                    //     content: "";
+                    //     width: 2px;
+                    //     height: 100%;
+                    // }
+                }
+            }
+        }
+    }
+}

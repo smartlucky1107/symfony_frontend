@@ -1,0 +1,29 @@
+@import "../../../../colors.scss";
+@import "../../../../responsiveBreakpoints.scss";
+
+.verificationStatusContent {
+    .statusBox {
+        text-align: center;
+        border-radius: 15px;
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @media #{$lg} {
+            margin-top: 37px;
+            margin-bottom: 40px;
+        }
+
+        .status {
+            margin-bottom: 10px;
+            &.success {
+                color: $green;
+            }
+        }
+        .statusMessage {
+            margin: 0;
+            font-size: $text-small;
+        }
+    }
+}

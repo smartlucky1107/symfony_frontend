@@ -1,0 +1,49 @@
+@import "./../../../../colors.scss";
+@import "./../../../../responsiveBreakpoints.scss";
+
+.confirmedReferralListContainer {
+    .confirmedReferralListFilterBar {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-end;
+        .confirmedReferralNumber {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: $text-super-small;
+            color: rgba($navy, 0.5);
+            span {
+                // color: $blue;
+                // border: 1px solid $blue;
+                color: #4046ff;
+                border: 1px solid #4046ff;
+                font-size: $text-small;
+                border-radius: 100rem;
+                padding: 9px 18px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .confirmedReferralList {
+        margin-top: 20px;
+    }
+    //     .infobox {
+    //         margin-top: 20px;
+    //     }
+    //     .confirmedReferralListHeader{
+
+    //     }
+    //     .confirmedReferralItem {
+    //         display: flex;
+    //         padding-top: 20px;
+    //         margin-top: 20px;
+    //         border-top: 1px dashed rgba($color: $navy, $alpha: 0.3);
+    //         font-size: $text-small;
+    //         justify-content: space-between;
+    //         font-weight: 600;
+    //         &:first-child {
+    //             border-top: none;
+    //         }
+    //     }
+}

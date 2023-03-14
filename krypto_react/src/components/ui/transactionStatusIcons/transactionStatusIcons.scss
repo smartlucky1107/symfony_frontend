@@ -1,0 +1,20 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.transactionStatusIcons {
+    &.approved {
+        .material-icons {
+            color: $green;
+        }
+    }
+    &.waiting {
+        .material-icons {
+            color: $yellow;
+        }
+    }
+    &.canceled {
+        .material-icons {
+            color: $red;
+        }
+    }
+}

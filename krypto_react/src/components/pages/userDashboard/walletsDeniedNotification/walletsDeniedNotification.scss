@@ -1,0 +1,74 @@
+@import "../../../colors.scss";
+@import "../../../responsiveBreakpoints.scss";
+
+.walletsDeniedNotification {
+    .walletsDeniedNotificationBoxWrapper {
+        .walletsDeniedNotificationImg {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 120px;
+            }
+            margin-bottom: 30px;
+        }
+        .kInput {
+            margin-bottom: 12px;
+            @media #{$xl} {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            input {
+                position: absolute;
+                left: 0;
+                top: 5px;
+                margin: 0;
+                &:checked ~ label {
+                    color: $blue;
+                }
+            }
+            label {
+                display: block;
+                padding-left: 20px;
+                color: rgba($color: $navy, $alpha: 0.5);
+            }
+        }
+        .kBtn {
+            margin-bottom: 12px;
+        }
+        .walletsDeniedNotificationBox {
+            box-sizing: border-box;
+            padding: 40px 30px;
+            box-shadow: 0px 0px 30px rgba($navy, 0.1);
+            border-radius: 5px;
+            color: $navy;
+
+            .walletsDeniedNotificationTitle {
+                width: 100%;
+                font-weight: 700;
+                font-size: $text-large;
+                text-align: center;
+            }
+
+            .walletsDeniedNotificationContent {
+                width: 100%;
+                padding: 30px 0;
+                font-size: $text-medium;
+                text-align: center;
+            }
+
+            &.error {
+                .walletsDeniedNotificationTitle {
+                    color: $red;
+                }
+            }
+
+            &.success {
+                .walletsDeniedNotificationTitle {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+.walletsBox {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @media #{$lg} {
+        margin-bottom: 40px;
+    }
+    .walletsListHeader {
+        display: flex;
+        font-size: $text-small;
+        color: rgba($color: $navy, $alpha: 0.5);
+        font-weight: 600;
+        .wrapper {
+            margin-bottom: 9px;
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 100%;
+            @media #{$sm} {
+                flex-basis: 50%;
+            }
+            @media #{$md} {
+                flex-basis: 100%;
+            }
+            @media #{$lg} {
+                flex-basis: 45%;
+            }
+        }
+        .walletName {
+            margin-left: 45px;
+        }
+        .walletAmount {
+        }
+    }
+}
+
+.wallet {
+    &:hover {
+        .btnBox {
+            a {
+                // color: $blue;
+                color: #565bff;
+            }
+        }
+    }
+}

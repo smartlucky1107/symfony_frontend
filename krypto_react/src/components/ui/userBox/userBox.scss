@@ -1,0 +1,57 @@
+@import "./../../colors.scss";
+@import "./../../responsiveBreakpoints.scss";
+
+.userBox {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    .userBoxIcon {
+        // position: absolute;
+        // display: flex;
+        // justify-content: center;
+        align-items: center;
+        width: 64px;
+        height: 64px;
+        text-decoration: none;
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .material-icons {
+            color: $blue;
+            border-radius: 50%;
+            border: 1px dashed rgba($blue, 0.4);
+            padding: 7px;
+            padding:10px 12px;
+            margin-left: 2px;
+        }
+    }
+    .userBoxData {
+        // padding: 18px 0 18px 73px;
+        padding: 10px;
+        line-height: 1.7;
+        display: block;
+        text-decoration: none;
+        color: $navy;
+        .error {
+            color: $red;
+        }
+        .warning {
+            color: $yellow;
+        }
+        .success {
+            color: $green;
+        }
+        .userBoxName {
+            font-weight: 600;
+            font-size: $text-small;
+        }
+        .userBoxVerify {
+            text-transform: uppercase;
+            font-size: 8px;
+            font-weight: 500;
+        }
+    }
+}

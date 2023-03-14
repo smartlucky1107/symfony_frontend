@@ -1,0 +1,95 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.mobileNavModal {
+    position: fixed;
+    bottom: -53px;
+    left: 0;
+    width: 100%;
+    z-index: 300;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: bottom 0.3s;
+    @media #{$sm} {
+        display: none !important;
+    }
+    &.active {
+        bottom: 0;
+        .iconsRow {
+            .iconBox {
+                &.buyIcon {
+                    width: 56px;
+                    margin: 0 5px;
+
+                    .icon {
+                        display: inline-block;
+                        width: auto;
+                        height: auto;
+                        font-size: $text-large;
+                        background-color: transparent;
+                        color: rgba($color: #304254, $alpha: 0.5);
+                    }
+                    .iconsName {
+                        color: rgba($color: #304254, $alpha: 0.5);
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .iconsRow {
+        display: block;
+        margin: 0 auto;
+        padding: 0 0 5px;
+        .iconBox {
+            width: 50px;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 0 5px;
+            color: rgba($color: #304254, $alpha: 0.5);
+            text-decoration: none;
+            &.active {
+                color: $blue;
+                &.buyIcon {
+                    .icon {
+                        background-color: #fff;
+                        color: $blue;
+                    }
+                    .iconsName {
+                        color: $blue;
+                    }
+                }
+            }
+            &.buyIcon {
+                width: 60px;
+                margin: -15px 0 0;
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    background-color: $blue;
+                    border-radius: 50%;
+                    color: #fff;
+                    width: 44px;
+                    height: 44px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                .iconsName {
+                    margin-top: 5px;
+                    color: $blue;
+                }
+            }
+            .icon {
+                font-size: $text-large;
+            }
+            .iconsName {
+                font-size: 7px;
+            }
+        }
+    }
+}

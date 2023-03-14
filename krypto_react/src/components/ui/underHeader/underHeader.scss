@@ -1,0 +1,17 @@
+@import "../../colors";
+@import "../../responsiveBreakpoints";
+
+.underHeader{
+  background:$lblue;
+  padding:75px 0;
+
+  .center{
+    text-align:center;
+  }
+  .description{
+    font-size:$text-medium;
+    line-height:2em;
+    color:$navy;
+    text-align:center;
+  }
+}

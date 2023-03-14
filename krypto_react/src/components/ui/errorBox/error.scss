@@ -1,0 +1,78 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.errorTooltip {
+    position: relative;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-style: solid;
+    border: 2px solid rgba($red, 0.4);
+    padding: 8px 10px;
+    color: $red;
+    font-size: $text-small;
+    text-align: center;
+    font-weight: 400;
+    &.top {
+        &::after {
+            position: absolute;
+            top: -22px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-bottom-color: rgba($red, 0.4);
+            width: 10px;
+            height: 5px;
+            content: "";
+        }
+    }
+    &.bottom {
+        &::after {
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-top-color: rgba($red, 0.4);
+            width: 10px;
+            height: 5px;
+            content: "";
+        }
+    }
+    &.left {
+        margin-left: 10px;
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            transform: translateY(-50%);
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-right-color: rgba($red, 0.4);
+            width: 10px;
+            height: 5px;
+            content: "";
+        }
+    }
+    &.right {
+        margin-right: 10px;
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: auto;
+            right: -22px;
+            transform: translateY(-50%);
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-left-color: rgba($red, 0.4);
+            width: 10px;
+            height: 5px;
+            content: "";
+        }
+    }
+}

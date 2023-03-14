@@ -1,0 +1,159 @@
+@import "./../../../../colors";
+@import "./../../../../responsiveBreakpoints";
+
+.transactionStatusComponent{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+
+    .statusDetails{
+        width:100%;
+    }
+
+    .error{
+        background:rgba($red, 0.2);
+        border:1px solid rgba($red, 0.15);
+        color:$red;
+        width:100%;
+        border-radius:5px;
+        padding:20px;
+        box-sizing: border-box;
+        text-align:center;
+    }
+
+    .detailsTable{
+        border:1px solid rgba($navy, 0.1);
+        margin-top:10px;
+        border-radius:5px;
+
+        .detailsTableHeader{
+            font-size: $text-super-small;
+            text-transform: uppercase;
+            text-align:center;
+            font-weight:600;
+            border-bottom:1px dashed rgba($navy, 0.1);
+            padding:15px;
+        }
+        .statusDetailsRow{
+            display:flex;
+            width:100%;
+            justify-content: space-between;
+            padding:10px 10px;
+            box-sizing: border-box;
+            font-weight:500;
+            font-size:$text-medium;
+            border-bottom:1px dotted rgba($navy, 0.1);
+
+            .text-right{
+                font-weight:600;
+                small{
+                    font-size:65%;
+                }
+                span{
+                    color:rgba($navy, 0.5);
+                }
+            }
+            &:last-child{
+                border-bottom:none;
+            }
+        }
+
+        .transactionId{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            padding:15px;
+            box-sizing:border-box;
+
+            .infoText{
+                color:rgba($navy, 0.5);
+                text-transform: uppercase;
+                font-weight:500;
+                font-size:$text-super-small;
+            }
+            .idHash{
+                font-size:$text-medium;
+                font-weight:500;
+                background:$lblue;
+                padding:3px 5px;
+                border-radius:5px;
+                margin-top:5px;
+            }
+        }
+    }
+
+    .transactionStatusViewer{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+
+        .smallText{
+            color:rgba($navy, 0.5);
+            text-transform: uppercase;
+            font-size:$text-super-small;
+            text-align: center;
+            font-weight:500;
+        }
+
+        .statusBoxView{
+            text-align:center;
+            border:1px solid;
+            border-radius:5px;
+            padding:15px;
+            font-weight:600;
+
+            &.paymentCreated{
+                background:rgba($blue, 0.2);
+                border-color:rgba($blue, 0.15);
+                color:$blue;
+            }
+
+            &.paymentPending{
+                background:rgba($yellow, 0.2);
+                border-color:rgba($yellow, 0.15);
+                color:$yellow;
+            }
+            &.paymentProcessing{
+                background:rgba($blue, 0.2);
+                border-color:rgba($blue, 0.15);
+                color:$blue;
+            }
+            &.paymentBooked{
+                background:rgba($green, 0.2);
+                border-color:rgba($green, 0.15);
+                color:$green;
+            }
+            &.approved{
+                background:rgba($green, 0.2);
+                border-color:rgba($green, 0.3);
+                color:$green;
+            }
+            &.rejected{
+                background:rgba($red, 0.2);
+                border-color:rgba($red, 0.15);
+                color:$red;
+            }
+        }
+    }
+
+    .btns{
+        margin-top:15px;
+        display:flex;
+
+        .kBtn{
+            box-sizing:border-box;
+            margin-right:15px;
+
+            &:last-child{
+                margin-right:0;
+            }
+
+            .kBtnInner{
+                .leftIcon{
+                    min-width:25px;
+                }
+            }
+        }
+    }
+}

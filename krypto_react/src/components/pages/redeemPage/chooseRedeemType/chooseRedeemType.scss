@@ -1,0 +1,161 @@
+@import "./../../../colors";
+
+.redeemInfo{
+    width:340px;
+    background:$white;
+    border-radius:5px;
+    box-sizing:border-box;
+    margin-top:15px;
+    font-weight:400;
+    font-size:$text-small;
+
+    .infoRow{
+        width:100%;
+        padding:10px 15px;
+        display:flex;
+        box-sizing: border-box;
+
+        .leftCol{
+            text-align:left;
+            flex:1;
+        }
+        .rightCol{
+            text-align:right;
+            flex:2;
+        }
+        .important{
+            font-weight:600;
+        }
+        .flex{
+            display:flex;
+            justify-content: flex-end;
+        }
+        small{
+            //color:rgba($navy, 0.5);
+            font-weight:600;
+            font-size:70%;
+        }
+        .trunc{
+            text-overflow:ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow:hidden;
+        }
+        .moreInfos{
+            cursor:pointer;
+            display:inline;
+            position:relative;
+            margin-left:3px;
+            color:$navy;
+            opacity:0.5;
+            cursor:pointer;
+
+            span{
+                font-size:$text-small;
+            }
+
+            .details{
+                position:absolute;
+                background:$white;
+                z-index:99;
+                right:0;
+                top:calc(100% + 2px);
+                display:none;
+                width:160px;
+                padding:10px 15px;
+                box-sizing:border-box;
+                border-radius:5px;
+                box-shadow:0px 0px 20px rgba($navy, 0.1);
+                font-size:$text-small;
+                color:$navy;
+                line-height:1.6em;
+                text-align: left;
+            }
+
+            &:hover{
+                opacity:1;
+
+                .details{
+                    display:block;
+                }
+            }
+        }
+    }
+}
+.redeemTypeContainer {
+    margin: 0 0 30px 0;
+    box-sizing: border-box;
+    width:340px;
+    max-width:100%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+
+
+    .chooseRedeemBtn {
+        width: 100%;
+        margin-bottom:10px;
+        display:flex;
+        align-items: center;
+        justify-content: left;
+        height:80px;
+        background:$white;
+        border:none;
+        border-radius:10px;
+        font-family: Montserrat;
+        transition: all 0.5s ease-in-out;
+        position:relative;
+
+        .iconBox{
+            width:60px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height:100%;
+            color:$navy;
+        }
+        .textBox{
+            flex:1;
+            color:$navy;
+            padding:0 10px 0 0;
+
+            .importantText{
+                font-weight:700;
+                font-size:$text-medium;
+            }
+            .smallText{
+                font-size:$text-super-small;
+                font-weight:500;
+                color:rgba($navy, 0.6);
+                margin-top:5px;
+            }
+        }
+
+        &:last-child{
+            margin-bottom:0;
+        }
+
+        &:hover{
+            transform: scale(1.025);
+            background: linear-gradient(80deg, $blue2 -20%, $blue, $blue3);
+            cursor:pointer;
+
+            .iconBox{
+                color:$white;
+            }
+            .textBox{
+                .importantText{
+                    color:$white;
+                }
+                .smallText{
+                    color:rgba($white, 0.6);
+                }
+            }
+        }
+    }
+
+    .inputContainer{
+        width:100%;
+    }
+}

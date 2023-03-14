@@ -1,0 +1,94 @@
+@import "./../../../../../colors.scss";
+@import "./../../../../../responsiveBreakpoints.scss";
+
+.verificationForm {
+    display: flex;
+    flex-flow: row wrap;
+    // justify-content: center;
+    .processInfo {
+        margin-top: 30px;
+        max-width: 265px;
+        margin-left: 30px;
+        @media #{$xl} {
+            margin-top: 0;
+        }
+        .infoImg {
+            max-height: 180px;
+        }
+    }
+    form {
+        width: 445px;
+        max-width: 100%;
+        margin: 60px 0;
+        .row {
+            justify-content: space-between;
+            .col {
+                flex-basis: 100%;
+                @media #{$md} {
+                    flex-basis: calc(50% - 15px);
+                    // &:first-child {
+                    //     padding-right: 15px;
+                    // }
+                    // &:last-child {
+                    //     padding-left: 15px;
+                    // }
+                }
+                &.col-25 {
+                    flex-basis: 100%;
+                    @media #{$md} {
+                        flex-basis: calc(25%);
+                    }
+                }
+                &.col-20 {
+                    flex-basis: 100%;
+                    @media #{$md} {
+                        flex-basis: calc(20%);
+                    }
+                }
+            }
+        }
+        .infobox {
+            margin-bottom: 30px;
+        }
+        .kInput {
+            margin-bottom: 15px;
+        }
+
+        .kSelect {
+            margin-bottom: 15px;
+            .selectedElement {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                display: block;
+                background: $white;
+                color: $blue;
+                text-decoration: none;
+                border: 2px solid $lblue;
+
+                padding: 10px 18px;
+                // border-radius: 100rem;
+                margin: 0;
+                transition: all 0.1s ease-in;
+                // box-shadow: 0px 0px 20px $lblue2;
+                .selectedElementInside {
+                    span {
+                        position: absolute;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+
+        label {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: #2684fe;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .kBtn {
+            margin-top: 15px;
+        }
+    }
+}

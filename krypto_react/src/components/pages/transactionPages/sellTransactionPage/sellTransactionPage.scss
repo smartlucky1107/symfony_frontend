@@ -1,0 +1,11 @@
+.transactionPage{
+  .container {
+    .transactionContainer {
+      .buySellContainer {
+        &.sell{
+          border-radius: 15px 0px 15px 15px;
+        }
+      }
+    }
+  }
+}

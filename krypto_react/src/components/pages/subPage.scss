@@ -1,0 +1,218 @@
+@import "./../colors";
+@import "./../responsiveBreakpoints";
+
+.subPage {
+    padding: 20px 15px;
+    @media #{$sm} {
+        padding: 40px 0;
+    }
+    img {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+    }
+
+    // h1 {
+    //     font-size: $text-large;
+
+    //     @media #{$sm} {
+    //         font-size: $text-header;
+    //     }
+    // }
+    .alignCenter {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        width: auto;
+
+        &.rowBox {
+            margin-left: -15px;
+            margin-right: -15px;
+            .col {
+                position: relative;
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                box-sizing: border-box;
+                flex: 0 0 100%;
+                max-width: 100%;
+                &.col-sm-6 {
+                    @media #{$sm} {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+                &.col-md-4 {
+                    @media #{$md} {
+                        flex: 0 0 33.333333%;
+                        max-width: 33.333333%;
+                    }
+                }
+                &.col-md-6 {
+                    @media #{$md} {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+                &.col-md-8 {
+                    @media #{$md} {
+                        flex: 0 0 66.666667%;
+                        max-width: 66.666667%;
+                    }
+                }
+
+                &.col-lg-6 {
+                    @media #{$lg} {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+                &.col-xl-3 {
+                    @media #{$xl} {
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                    }
+                }
+                &.col-xl-4 {
+                    @media #{$xl} {
+                        flex: 0 0 33.333333%;
+                        max-width: 33.333333%;
+                    }
+                }
+                &.col-xl-6 {
+                    @media #{$xl} {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+
+                &.col-xl-8 {
+                    @media #{$xl} {
+                        flex: 0 0 66.666667%;
+                        max-width: 66.666667%;
+                    }
+                }
+                &.col-xl-9 {
+                    @media #{$xl} {
+                        flex: 0 0 75%;
+                        max-width: 75%;
+                    }
+                }
+            }
+        }
+    }
+
+    .sticky {
+        @media #{$md} {
+            position: -webkit-sticky;
+
+            position: sticky;
+            top: 2em;
+        }
+    }
+    .order {
+        order: 1;
+        &.order-2 {
+            order: 2;
+        }
+        &.order-xl-1 {
+            @media #{$xl} {
+                order: 1;
+            }
+        }
+        &.order-xl-2 {
+            @media #{$xl} {
+                order: 2;
+            }
+        }
+    }
+
+    .offsetTop {
+        margin-top: 2em;
+    }
+
+    .contentSection {
+        font-size: $text-medium;
+
+        p {
+            line-height: 1.8em;
+        }
+    }
+    ol {
+        &.alphabetical {
+            list-style-type: lower-latin;
+        }
+        li {
+            margin-bottom: 1em;
+        }
+        ol {
+            margin-top: 1em;
+        }
+    }
+
+    .subPage_ImportantText {
+        font-weight: 600;
+        font-size: $text-medium;
+        text-align: center;
+        // background: rgba($blue, 0.1);
+        // color: $blue;
+        background: #696df033!important;
+        color: #5358e6!important;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    .subPage_SectionText {
+        header {
+            font-weight: 600;
+            font-size: $text-large;
+        }
+
+        ul {
+            li {
+                padding: 5px;
+                font-size: $text-medium;
+            }
+        }
+    }
+
+    .sectionText_defaultSection {
+        padding: 20px 0;
+
+        p {
+            line-height: 1.8em;
+            letter-spacing: 0.005em;
+            text-align: justify;
+
+            // &:last-child {
+            // }
+        }
+    }
+    .sectionText_miniSection {
+        margin: 15px 0;
+        // background: rgba($navy, 0.025);
+        // border: 1px dashed rgba($navy, 0.1);
+        border-radius: 5px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        box-shadow: inset 0px 0px 5px rgba(101, 106, 238, 0.9);
+
+        header {
+            font-size: $text-big;
+            color: #4f54e4;
+        }
+        p {
+            font-size: $text-medium;
+            line-height: 1.8em;
+            letter-spacing: 0.005em;
+            text-align: justify;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

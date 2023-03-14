@@ -1,0 +1,35 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.redeemPage {
+    .contentSection {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: $lblue;
+        border-bottom: 1px dotted rgba($navy, 0.1);
+        padding: 30px 0 40px 0;
+    }
+
+    .info {
+        font-size: $text-small;
+        color: $blue;
+        background: rgba($blue, 0.15);
+        border: 1px solid rgba($blue, 0.6);
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        box-sizing: border-box;
+
+        &.error {
+            color: $red;
+            background: rgba($red, 0.15);
+            border: 1px solid rgba($red, 0.6);
+            line-height: 1.5em;
+        }
+    }
+}

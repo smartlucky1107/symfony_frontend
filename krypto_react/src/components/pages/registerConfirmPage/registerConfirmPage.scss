@@ -1,0 +1,67 @@
+@import "./../../colors";
+.registerConfirmPage{
+    .container{
+        justify-content: center;
+        align-items: center;
+
+        .narrowContainer{
+            margin:60px 0;
+            min-height:42vh;
+            position:relative;
+
+            .accountConfirmedBoxWrapper {
+                .accountConfirmedImg{
+                    display:flex;
+                    justify-content: center;
+
+                    img{
+                        width:120px;
+                    }
+                    margin-bottom:30px;
+                }
+                .accountConfirmedBox {
+                    box-sizing: border-box;
+                    padding: 40px 30px;
+                    box-shadow: 0px 0px 30px rgba($navy, 0.1);
+                    border-radius: 5px;
+                    color: $navy;
+
+                    .title {
+                        width: 100%;
+                        font-weight: 700;
+                        font-size: $text-large;
+                        text-align: center;
+                    }
+
+                    .content {
+                        width: 100%;
+                        padding: 30px 0;
+                        font-size: $text-medium;
+                        text-align: center;
+                    }
+
+                    .buttons {
+                        width: 100%;
+                        box-sizing: border-box;
+
+                        .kBtn {
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    &.error {
+                        .title {
+                            color: $red;
+                        }
+                    }
+
+                    &.success {
+                        .title {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.workspacePosInstallation {
+    .workspacePosImg {
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+    .flexBox {
+        display: flex;
+    }
+    .alignMe {
+        align-self: center;
+    }
+    .installPos {
+        margin-bottom: 2em;
+        .infobox {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .kBtn {
+            margin-right: 1em;
+        }
+    }
+}
+.launchImg{
+    text-align: center;
+    margin-top: -35px;
+    margin-bottom: 1rem;
+}
+.launchImg img{
+    width: 200px;
+}

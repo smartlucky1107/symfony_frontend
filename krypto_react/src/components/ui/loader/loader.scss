@@ -1,0 +1,79 @@
+@import "./../../colors";
+
+.loader{
+    min-height:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    animation: introOpacityOnly 0.5s linear;
+
+    .loadingElement{
+        width:40px;
+        height:40px;
+        border-radius:100rem;
+        animation: spin 1s linear infinite;
+
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+
+    .label{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        z-index:2;
+        background: rgba($white, 1);
+        font-size:9px;
+        text-transform: uppercase;
+        font-weight:600;
+        color:rgba($blue, 0.9);
+        padding:3px 10px;
+        animation: float 2s ease-in-out infinite;
+        border:1px dotted rgba($blue, 1);
+        border-radius:100rem;
+    }
+
+    &.absolute{
+        position:absolute;
+        z-index:99;
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
+        background:rgba($white, 0.8);
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0%{
+        transform: rotate(0deg) translate(-50%,-50%);
+    }
+    25%{
+        transform: rotate(-2deg) translate(-52%, -53%);
+    }
+    50%{
+        transform: rotate(2deg) translate(-49%, -48%);
+    }
+    75%{
+        transform: rotate(-2deg) translate(-51%, -49%);
+    }
+    100%{
+        transform: rotate(0deg) translate(-50%,-50%);
+    }
+}

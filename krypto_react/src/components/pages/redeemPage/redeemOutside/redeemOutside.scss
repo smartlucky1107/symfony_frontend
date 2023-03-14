@@ -1,0 +1,44 @@
+@import "./../../../colors";
+
+.redeemOutside{
+    width:340px;
+    min-height:calc(100vh - 500px);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    .redeemOutsideContent{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width:100%;
+
+        .imgContent{
+            width:125px;
+            margin-bottom:15px;
+
+            img{
+                width:100%;
+                animation: iconEntry 0.5s ease-in-out;
+            }
+        }
+
+        .redeemContent{
+            background:$white;
+            width:100%;
+            border-radius:5px;
+            padding:30px;
+            box-sizing:border-box;
+            margin-top:10px;
+
+            .kInput{
+                margin-bottom:15px;
+
+                &:last-child{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+}

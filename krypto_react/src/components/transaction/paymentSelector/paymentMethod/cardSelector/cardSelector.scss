@@ -1,0 +1,90 @@
+@import "./../../../../colors";
+@import "./../../../../responsiveBreakpoints";
+
+.cardSelector{
+    width:100%;
+    padding:10px 20px 15px;
+    box-sizing: border-box;
+
+    @media #{$sm}{
+        padding:10px 30px 15px;
+    }
+
+    .cardSelectorHeader{
+        color:rgba($navy, 0.5);
+        text-transform: uppercase;
+        font-size: $text-super-small;
+        font-weight:600;
+        width:100%;
+        text-align: center;
+        padding-bottom:5px;
+    }
+
+    .kSelect{
+
+        .cardImg{
+            display:flex;
+            align-items: center;
+            img{
+                width:28px;
+            }
+        }
+        .cardNumber{
+            letter-spacing:0.05em;
+            font-size: $text-super-small;
+            flex:1;
+            font-weight:500;
+            color:rgba($navy,0.8);
+
+            @media #{$sm} {
+                font-size: $text-small;
+                letter-spacing:0.1em;
+            }
+        }
+
+        .selectedElement{
+            border:1px solid $lblue;
+            box-shadow: 0px 0px 15px $lblue;
+            padding:10px 14px;
+
+            &:hover{
+                border-color:rgba($navy, 0.1);
+                background:$white;
+            }
+
+            .selectedElementInside{
+                flex:1;
+
+                .selectedElementText{
+                    flex:1;
+
+                    .selectedCard{
+                        display:flex;
+                        box-sizing:border-box;
+                        justify-content: space-between;
+                        align-items: center;
+                        .cardImg{
+                            width:20px;
+                            margin-right:20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .optionsList{
+            .kOption{
+                padding:10px 15px;
+                display:flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .addCard{
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

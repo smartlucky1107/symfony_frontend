@@ -1,0 +1,142 @@
+@import "./../../colors";
+
+.kTextarea {
+
+    label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: $blue;
+        font-size: $text-small;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .kTextareaInside {
+        position: relative;
+        display: flex;
+        border-radius: 5px;
+        border: 2px solid $lblue;
+        box-sizing: border-box;
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            background: $white;
+            color: $navy;
+            font-size: $text-medium;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            padding: 12px 14px;
+            //border-radius:5px;
+
+            &:focus {
+                outline: none;
+            }
+
+            &.big {
+                font-size: $text-big;
+            }
+            &.weight700 {
+                font-weight: 700;
+            }
+            &.hasChildren {
+                width: calc(100% - 80px);
+                border-radius: 5px 0 0 5px;
+            }
+            &.noresize{
+                resize:none;
+            }
+            &.copy{
+                padding-right:55px;
+            }
+        }
+
+        .copyToClipboard{
+            width:45px;
+            height:40px;
+            background:$lblue;
+            border:none;
+            border-radius:0 0 0 5px;
+            align-items: center;
+            justify-content: center;
+            display:flex;
+            cursor:pointer;
+            position:absolute;
+            right:0;
+            top:0;
+
+            span{
+                color:rgba($navy, 0.5);
+                font-size:$text-large;
+            }
+
+            &:hover{
+
+                span{
+                    color:rgba($navy,1);
+                }
+            }
+        }
+
+        .hiddenBox{
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            z-index:999;
+            background:$lblue;
+            height:100%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size:$text-small;
+            font-weight:500;
+            color:rgba($navy, 0.7);
+        }
+
+        &:hover{
+
+            .hiddenBox{
+                display:none;
+            }
+        }
+    }
+
+    .isRequired{
+        font-size:70%;
+        font-weight:600;
+        margin-left:5px;
+        color:$red;
+        display:inline-flex;
+        align-items: center;
+        line-height:1em;
+        position:relative;
+        opacity:0.5;
+
+        span{
+            font-size:150%;
+        }
+
+        .isRequiredText{
+            display:none;
+            background:$red;
+            color:$white;
+            padding:3px 5px;
+            border-radius:3px;
+            text-transform:uppercase;
+            letter-spacing:0.05em;
+            position:absolute;
+            left:100%;
+        }
+
+        &:hover{
+            opacity:1;
+            .isRequiredText{
+                display:block;
+            }
+        }
+    }
+}

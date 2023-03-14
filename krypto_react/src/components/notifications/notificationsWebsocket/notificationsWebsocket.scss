@@ -1,0 +1,65 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.notifications-component{
+    margin-top:100px;
+    position: fixed;
+
+    .notification__item--danger{
+        background:$white;
+        border-left:none;
+        border-right:5px solid $red;
+        .notification__message{
+            color:$red;
+            font-weight:600;
+            font-size:$text-small;
+        }
+    }
+    .notification__item--success{
+        background:$white;
+        border-left:none;
+        border-right:5px solid $blue;
+        .notification__message{
+            color:$blue;
+            font-weight:600;
+            font-size:$text-small;
+        }
+
+    }
+    .notification__item--info{
+        background:$white;
+        border-left:none;
+        border-right:5px solid $navy;
+        .notification__message{
+            color:$navy;
+            font-weight:600;
+            font-size:$text-small;
+        }
+    }
+}
+.socketInfo{
+    animation: introOpacityOnly 0.5s linear;
+    position:fixed;
+    bottom:60px;
+    z-index:998;
+    text-align: center;
+    font-size: $text-small;
+    padding:10px 15px;
+    box-sizing:border-box;
+    font-weight:500;
+    width:100%;
+    border-radius:5px;
+
+    @media #{$sm} {
+        bottom:0;
+        margin-left:40px;
+        margin-bottom:20px;
+        width:calc(100% - 80px);
+    }
+
+    &.pending{
+        color:$white;
+        background:rgba($yellow, 0.9);
+        border:1px solid $yellow;
+    }
+}

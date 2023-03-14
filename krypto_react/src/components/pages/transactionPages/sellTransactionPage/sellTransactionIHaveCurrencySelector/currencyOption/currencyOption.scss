@@ -1,0 +1,53 @@
+@import "./../../../../../colors";
+
+.currencyOption {
+    width: 100%;
+    display: flex;
+    border: 1px solid rgba($navy, 0.1);
+    border-radius: 100rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $text-small;
+    color: $navy;
+    padding: 3px;
+    box-sizing: border-box;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        border: 1px solid rgba($navy, 0.2);
+    }
+
+    &.active {
+        border: 1px solid $blue;
+        cursor: default;
+    }
+
+    .currencyIcon {
+        width: 25px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .currencyFullName {
+        flex: 1;
+    }
+
+    .currencyFreeAmount {
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .currencyShortName {
+        color: rgba($navy, 0.5);
+        margin-right: 8px;
+    }
+}

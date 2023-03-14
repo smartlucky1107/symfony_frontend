@@ -1,0 +1,43 @@
+@import "../../../colors.scss";
+@import "../../../responsiveBreakpoints.scss";
+
+.dashboardPaymentcards {
+    .infobox {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .paymentcards-list {
+        margin-top: 30px;
+    }
+    .contentImg {
+        display: none;
+        @media #{$xl} {
+            display: block;
+        }
+    }
+    .imgsize {
+        position: relative;
+        max-width: 60%!important;
+        height: auto;
+    }
+    .customArrayList {
+        .customListHeader {
+            .customListItemCol {
+                &.icon {
+                    flex-grow: 0.3;
+                }
+            }
+        }
+        .customListItemRow {
+            font-size: $text-super-small;
+            .customListItemCol {
+                &.icon {
+                    flex-grow: 0.3;
+                }
+            }
+        }
+    }
+}
+.mt-1{
+    margin-top: 1rem;
+}

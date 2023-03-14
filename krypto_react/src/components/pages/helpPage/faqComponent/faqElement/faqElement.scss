@@ -1,0 +1,74 @@
+@import "./../../../../colors";
+@import "./../../../../responsiveBreakpoints";
+
+
+.faqElement{
+    display:flex;
+    flex-direction: column;
+    border:1px solid $lblue2;
+    border-bottom:none;
+
+    &:hover{
+        border:1px solid rgba($navy, 0.15);
+        border-bottom:none;
+    }
+
+    &:last-child{
+        border-bottom:1px solid $lblue2;
+
+        &:hover{
+            border-bottom:1px solid rgba($navy, 0.15);
+        }
+    }
+
+    .faqElementTitle{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px 30px;
+        box-sizing:border-box;
+
+        .titleContainer{
+            font-weight:600;
+            color:$navy;
+            user-select: none;
+        }
+        .iconContainer{
+            display:flex;
+            align-items: center;
+            opacity:0.6;
+        }
+
+        &:hover{
+            cursor:pointer;
+
+            .iconContainer{
+                opacity:1;
+            }
+        }
+    }
+
+    .faqElementContent{
+
+        &.hide{
+            max-height:0px;
+            overflow:hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        &.show{
+            overflow:hidden;
+            max-height:500px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .faqElementContentInside{
+            padding:15px 30px 20px 30px;
+            box-sizing: border-box;
+            border-top:1px dashed $lblue2;
+            font-size:$text-medium;
+            font-weight:400;
+            line-height:1.8em;
+            //letter-spacing:0.025em;
+        }
+    }
+}

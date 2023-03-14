@@ -1,0 +1,289 @@
+@import "./../../../colors";
+@import "./../../../responsiveBreakpoints";
+
+.paymentMethodWrapper {
+    animation: introOpacityOnly 0.25s linear;
+    border: 1px solid transparent;
+    border-bottom: 1px dashed $lblue2;
+    border-radius: 5px;
+    position: relative;
+
+    &:hover {
+        box-shadow: 0px 0px 30px $lblue;
+        border: 1px solid rgba($blue, 0.3);
+    }
+
+    &:last-child {
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid rgba($blue, 0.3);
+        }
+    }
+
+    &.internal {
+        padding-bottom: 15px;
+    }
+
+    &.highlight {
+        border: 1px solid rgba($blue, 0.3);
+        background: rgba($blue, 0.05);
+        border-radius: 5px;
+
+        &:hover {
+            border: 1px solid rgba($blue, 0.5);
+        }
+    }
+
+    &.startedDisabled {
+        opacity: 0.3;
+        filter: grayscale(0.9) blur(3px);
+
+        &:hover {
+            border: 1px solid transparent;
+        }
+
+        .paymentMethod {
+            cursor: default;
+
+            button {
+                cursor: default;
+            }
+        }
+    }
+
+    &.startedLoading {
+        border: 1px solid $blue;
+    }
+    .depositInfo {
+        text-align: right;
+        color: $blue;
+        margin-left: 5px;
+        .material-icons {
+            font-size: $text-big;
+        }
+    }
+}
+
+.paymentMethod {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-wrap: wrap;
+    position: relative;
+
+    @media #{$sm} {
+        padding: 20px 30px;
+        flex-wrap: nowrap;
+    }
+
+    .notEnoughCurrency {
+        width: 100%;
+        border: 1px dashed $red;
+        background: rgba($red, 0.05);
+        border-radius: 5px;
+        padding: 15px 0;
+
+        @media #{$sm} {
+            width: 100px;
+            border: none;
+            padding: 0;
+            background: transparent;
+        }
+
+        .info {
+            width: 100%;
+            text-align: center;
+
+            .infoText {
+                color: $red;
+                font-size: $text-small;
+                font-weight: 600;
+            }
+
+            .currencyAmountInfo {
+                padding-top: 5px;
+
+                .text {
+                    font-size: $text-super-small;
+                    color: rgba($navy, 0.8);
+                }
+
+                .amount {
+                    font-size: $text-small;
+                    color: $red;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .btns {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+            @media #{$sm} {
+                display: none;
+            }
+        }
+    }
+
+    .productTag {
+        color: $blue;
+        font-weight: 700;
+        font-size: $text-big;
+    }
+
+    .productTagLabel {
+        font-size: $text-super-small;
+        color: rgba($navy, 0.5);
+        font-weight: 500;
+    }
+
+    .priceTag {
+        font-size: $text-medium;
+        color: rgba($navy, 0.8);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        .tooltipWrapper {
+            display: flex;
+        }
+
+        .feeTag {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+            color: rgba($navy, 0.3);
+
+            .feeLabel {
+                font-size: 10px;
+            }
+
+            span {
+                font-size: $text-small;
+                font-weight: 600;
+            }
+        }
+
+        &:hover {
+            .feeTag {
+                color: rgba($red, 1);
+            }
+        }
+    }
+
+    .priceTagLabel {
+        font-size: $text-super-small;
+        color: rgba($navy, 0.5);
+        font-weight: 500;
+        margin-top: 5px;
+    }
+
+    .paymentProcessor {
+        display: flex;
+        flex-direction: column;
+        max-width: 80px;
+        width: 80px;
+
+        img {
+            //max-width:80px;
+            //display:block;
+            //width:80px;
+            flex: 1;
+            max-width: 100%;
+        }
+
+        .availableCardProviders {
+            display: flex;
+            max-width: 90%;
+            margin-left: 5%;
+            margin-top: 5px;
+
+            .availableCardProvider {
+                flex-basis: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                margin-right: 10px;
+
+                img {
+                    max-width: 100%;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                    flex-basis: 40%;
+                }
+            }
+        }
+
+        .payWith {
+            font-size: 7px;
+            color: rgba($navy, 0.5);
+            font-weight: 600;
+            text-transform: uppercase;
+            background: $lblue2;
+            padding: 2px 3px;
+            letter-spacing: 0.05em;
+            border-radius: 5px;
+            text-align: center;
+            //max-width:82px;
+        }
+    }
+
+    .leftColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .middleColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .rightColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 100%;
+        margin-top: 10px;
+        @media #{$sm} {
+            flex-basis: auto;
+            margin-top: 0;
+        }
+    }
+
+    &.disabled {
+        position: relative;
+        cursor: default;
+
+        .notAvailable {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media #{$sm} {
+                margin-left: 15px;
+            }
+            .inner {
+                color: rgba($navy, 0.8);
+                background: rgba($navy, 0.05);
+                font-size: $text-super-small;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

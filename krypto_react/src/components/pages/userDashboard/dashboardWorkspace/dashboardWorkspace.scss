@@ -1,0 +1,207 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.dashboardWorkspace {
+    .stdDashboardHeader {
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 25px;
+            padding: 0 5px 0 15px;
+        }
+    }
+    .col {
+        flex-basis: 100%;
+        @media #{$md} {
+            flex-basis: 50%;
+        }
+    }
+    .sellBuyBtns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-flow: column wrap;
+        .kBtn {
+            margin-bottom: 15px;
+        }
+    }
+    .walletData {
+        .text {
+            color: rgba($navy, 0.5);
+            font-size: $text-small;
+        }
+        .walletFreeAmount {
+            font-size: 25px;
+            font-weight: 600;
+            span {
+                color: rgba($navy, 0.5);
+                font-size: $text-medium;
+                margin-left: 5px;
+            }
+        }
+        .walletAmountPending {
+            font-size: $text-small;
+            font-weight: 500;
+            color: rgba($navy, 0.5);
+            display: flex;
+            align-items: center;
+            span {
+                font-size: $text-small;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    .transferTitle {
+        text-align: center;
+        margin: 15px 0;
+        .infobox {
+            font-size: $text-large;
+            font-weight: 700;
+            span {
+                display: block;
+                line-height: 1em;
+                font-weight: 400;
+                font-size: $text-small;
+            }
+        }
+    }
+    .bankBic {
+        font-size: $text-medium;
+        font-weight: 600;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .depositInfo {
+        font-size: $text-super-small;
+        margin: 15px 0;
+    }
+    .recipientData {
+        text-align: center;
+        margin: 15px 0;
+        .infobox {
+            font-size: $text-medium;
+            span {
+                display: block;
+                line-height: 1em;
+                font-weight: 400;
+                font-size: $text-small;
+            }
+        }
+    }
+    .aditionalInfos {
+        margin: 15px 0;
+        text-transform: uppercase;
+        font-size: $text-super-small;
+        text-align: center;
+    }
+    .content {
+        width: 100%;
+        margin-bottom: 30px;
+        @media #{$xl} {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+.flexTable {
+    .flexTableHeader {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: $text-small;
+        color: rgba($navy, 0.5);
+        font-weight: 600;
+        margin-bottom: 9px;
+        .flexTableCol {
+            flex: 1 1;
+            &:last-child {
+                text-align: right;
+            }
+            &.time {
+                padding: 0 5px;
+                flex-grow: 0.5;
+            }
+        }
+    }
+
+    .flexTableRow {
+        .flexTableCol {
+            &.time {
+                flex-grow: 0.5;
+                padding: 0 5px;
+            }
+            &.date {
+                display: flex;
+                span {
+                    align-self: center;
+                    font-size: $text-medium;
+                }
+            }
+            &.amount {
+                &.isApproved {
+                    color: $blue;
+                }
+                &.isDeclined {
+                    color: $red;
+                }
+                &.isRequest {
+                    color: rgba($blue, 0.5);
+                }
+                &.isReverted {
+                    color: $yellow;
+                }
+                &.isExternalApproval {
+                    color: $blue;
+                }
+                &.isKantorWithdrawal {
+                    color: $red;
+                }
+                &.isRejected {
+                    color: $red;
+                }
+                &.isTransferred {
+                    color: $blue;
+                }
+                &.isNew {
+                    color: $yellow;
+                }
+            }
+            &.status {
+                .tooltipWrapper {
+                    display: inline-block;
+                    &.isApproved {
+                        color: $blue;
+                    }
+                    &.isDeclined {
+                        color: $red;
+                    }
+                    &.isRequest {
+                        color: rgba($blue, 0.5);
+                    }
+                    &.isReverted {
+                        color: $yellow;
+                    }
+                    &.isExternalApproval {
+                        color: $blue;
+                    }
+                    &.isKantorWithdrawal {
+                        color: $red;
+                    }
+                    &.isRejected {
+                        color: $red;
+                    }
+                    &.isTransferred {
+                        color: $blue;
+                    }
+                    &.isNew {
+                        color: $yellow;
+                    }
+                }
+                .material-icons {
+                    font-size: $text-small;
+                    width: 12px;
+                }
+            }
+        }
+    }
+}

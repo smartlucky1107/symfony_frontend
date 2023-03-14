@@ -1,0 +1,20 @@
+.helpPage{
+    .needContact{
+        margin-top:40px;
+    }
+}
+.faqElement:hover {
+    border: 1px solid rgba(16, 37, 59, 0.15);
+    border-bottom: none;
+    border-left-color: #5358e5!important;
+}
+.faqElement .faqElementTitle .titleContainer {
+    font-weight: 500!important;
+    color: #5056ff!important;
+}
+.contactComponent .contactOption.aditionalInfos{
+    border: 1px solid transparent!important;
+    box-shadow: inset 0px 0px 5px rgba(101, 106, 238, 0.9)!important;
+}
+
+

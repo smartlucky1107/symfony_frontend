@@ -1,0 +1,27 @@
+@import "./../../../../colors";
+@import "./../../../../responsiveBreakpoints";
+
+.referralQrCode {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+
+    .qrCodeText {
+        font-size: $text-small;
+        padding: 15px 15px 15px 0;
+        line-height: 1.5em;
+        font-weight: 500;
+        color: rgba($navy, 0.6);
+    }
+
+    .qrCodeAditionalInfos {
+        font-size: $text-super-small;
+        margin-right: 20px;
+        color: $navy;
+    }
+}
+.qrCodeTexts label{
+    font-size: 12px;
+    font-weight: bold;
+}

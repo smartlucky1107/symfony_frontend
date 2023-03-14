@@ -1,0 +1,102 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.progressBarContent {
+    position: relative;
+    width: 100%;
+    // width: calc(100% - 20px);
+    height: 30px;
+    left: 0;
+    // margin: 0 auto 30px;
+    margin-bottom: 2em;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    @media #{$xl} {
+        margin-bottom: 3em;
+    }
+    .progressBar {
+        position: relative;
+        width: 100%;
+        height: 7px;
+        background: rgba($navy, 0.1);
+        border-radius: 100rem;
+        z-index: 50;
+        .progressBarLength {
+            width: 0%;
+            background: $blue;
+            height: 100%;
+            transition: width 2s;
+            &.success {
+                transition: background-color 0.3s;
+                background-color: $green;
+            }
+        }
+        .progressBarPoint {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            padding: 19px 0 0;
+            max-width: 25%;
+
+            &::after {
+                position: absolute;
+                top: -6px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: $blue;
+                content: "";
+            }
+
+            &.startPoint {
+                &::before {
+                    position: absolute;
+                    top: -10px;
+                    left: -4px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    border: 2px solid $blue;
+                    content: "";
+                }
+            }
+            &.endPoint {
+                &::after {
+                    background-color: $green;
+                }
+                &::before {
+                    position: absolute;
+                    top: -10px;
+                    left: -4px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    border: 2px solid $green;
+                    content: "";
+                }
+            }
+            &.success {
+                &::before {
+                    border-color: $green;
+                }
+                &::after {
+                    background-color: $green;
+                }
+            }
+            .progressBarPointContent {
+                transform: translateX(calc(-50% + 6px));
+                text-align: center;
+                font-size: $text-super-small;
+                display: none;
+                @media #{$sm} {
+                    display: block;
+                }
+                @media #{$md} {
+                    font-size: $text-small;
+                }
+            }
+        }
+    }
+}

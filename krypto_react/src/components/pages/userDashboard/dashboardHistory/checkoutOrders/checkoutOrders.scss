@@ -1,0 +1,59 @@
+@import "../../../../colors.scss";
+@import "../../../../responsiveBreakpoints.scss";
+.historyListTable {
+    .historyListHeader {
+        .status {
+            flex-grow: 0.2;
+        }
+    }
+    .historyListBody {
+        .listItemRow {
+            flex-flow: row wrap;
+            overflow: hidden;
+            max-height: 25px;
+            border-radius: 25px;
+            transition: max-height 0.3s;
+            cursor: pointer;
+            &.show {
+                max-height: 500px;
+                background-color: #f0f3f8;
+            }
+            .status {
+                flex-grow: 0.2;
+                .material-icons {
+                    font-size: $text-small;
+                    width: $text-small;
+                }
+            }
+            .historyDetails {
+                width: 100%;
+                display: block;
+                margin-top: 20px;
+                .historyDetailsTitle {
+                    margin-bottom: 10px;
+                }
+                .detailsRow {
+                    color: rgba($navy, 0.5);
+                    display: flex;
+                    justify-content: space-between;
+                    flex-flow: row wrap;
+                }
+                .col-xl-6 {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 1px;
+                        height: 100%;
+                        border-left: 1px dashed rgba($navy, 0.5);
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
+.text-center{
+    text-align: center;
+}

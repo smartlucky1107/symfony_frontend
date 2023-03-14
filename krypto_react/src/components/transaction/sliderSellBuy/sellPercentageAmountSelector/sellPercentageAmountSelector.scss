@@ -1,0 +1,57 @@
+@import "./../../../colors";
+@import "./../../../responsiveBreakpoints";
+
+.sellPercentageAmountSelector{
+    margin-bottom:10px;
+    .sellPercentageAmountSelectorLabel{
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: $blue;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+        cursor: default;
+        user-select: none;
+    }
+    .sellPercentageAmountSelectorButtons{
+        display:flex;
+
+        .percentageButton{
+            flex:1;
+            text-align:center;
+            background:$white;
+            color:rgba($navy, 0.6);
+            font-size:$text-small;
+            border:1px solid rgba($navy, 0.1);
+            padding:4px;
+            box-sizing: border-box;
+            cursor:pointer;
+            user-select: none;
+            font-weight:500;
+
+            &:hover{
+                color: #5e62ec;
+                border-color:#5e62ec;
+            }
+
+            &:first-child{
+                border-radius:100rem 0 0 100rem;
+            }
+            &:last-child{
+                border-radius:0 100rem 100rem 0;
+            }
+
+            &.disabled{
+                opacity:0.5;
+                cursor: not-allowed;
+
+                &:hover{
+                    border:1px solid rgba($navy, 0.1);
+                    color:rgba($navy, 0.8);
+                }
+            }
+        }
+    }
+}

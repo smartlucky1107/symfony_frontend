@@ -1,0 +1,43 @@
+@import "./../../colors";
+
+.timerBarWrapper{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.timerBarLabel{
+    font-size: $text-super-small;
+    font-weight:600;
+    color:rgba($navy, 0.4);
+    margin-top:3px;
+}
+.timerBar{
+    width:100%;
+    background:rgba($navy, 0.1);
+    height:7px;
+    border-radius:100rem;
+    overflow:hidden;
+    position: relative;
+    z-index:50;
+
+    .timerBarInside{
+        width:0%;
+        background:$blue;
+        height:100%;
+
+        &.startAnim{
+            animation: 5s timerBarAnim linear;
+        }
+    }
+
+    @keyframes timerBarAnim {
+        0%{
+            width:100%;
+        }
+        100%{
+            width:0%;
+        }
+    }
+}

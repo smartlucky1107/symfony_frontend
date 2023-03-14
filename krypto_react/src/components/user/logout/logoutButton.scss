@@ -1,0 +1,28 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.logoutButton{
+    width:25px;
+    height:25px;
+    background:$lblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    border-radius:100rem;
+    margin-left:10px;
+    cursor:pointer;
+
+    span{
+        font-size:$text-medium;
+        color:$navy;
+        font-weight:800;
+        opacity:0.4;
+    }
+
+    &:hover{
+        span{
+            opacity:1;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.forPartnersPage {
+    .imgOffset {
+        margin-top: 1em;
+        @media #{$xl} {
+            margin-top: 0;
+        }
+    }
+}
+
+.customList.numberList li span {
+    position: absolute;
+    top: 0.5rem;
+    left: -30px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    border: 1px dashed gray;
+}

@@ -1,0 +1,36 @@
+@import "../../../colors.scss";
+@import "../../../responsiveBreakpoints.scss";
+
+.walletsAgreeForm {
+    p {
+        line-height: 1.3em;
+    }
+
+    .material-icons {
+        color: $yellow;
+    }
+    .agreementImg {
+        max-width: 120px;
+        margin-bottom: 20px;
+    }
+    .kInput {
+        margin-bottom: 12px;
+        input {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            margin: 0;
+            &:checked ~ label {
+                color: $blue;
+            }
+        }
+        label {
+            display: block;
+            padding-left: 20px;
+            color: rgba($color: $navy, $alpha: 0.5);
+        }
+    }
+    .kBtn {
+        margin-bottom: 12px;
+    }
+}

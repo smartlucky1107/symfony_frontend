@@ -1,0 +1,68 @@
+@import "../../../../../colors.scss";
+@import "../../../../../responsiveBreakpoints.scss";
+
+.withdrawalCrypto {
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        // justify-content: flex-end;
+        align-items: flex-start;
+        // flex-flow: column wrap;
+        .tooltipWrapper {
+            margin: 0 15px 15px;
+        }
+    }
+    .tooltipWrapper {
+        // display: inline-block;
+    }
+    form {
+        @media #{$lg} {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+        .withdrawInternalAmountBox {
+            position: relative;
+            .max {
+                position: absolute;
+                top: 25px;
+                right: 7px;
+                z-index: 10;
+            }
+        }
+        .withdrawExternalAmountBox {
+            position: relative;
+            .max {
+                position: absolute;
+                top: 25px;
+                right: 7px;
+                z-index: 10;
+            }
+            .fee {
+                position: absolute;
+                top: 0;
+                right: 0;
+                text-align: left;
+                color: $blue;
+                font-size: $text-super-small;
+                font-weight: 500;
+                margin-bottom: 5px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .kInput {
+        margin-bottom: 15px;
+    }
+    .content {
+        .infobox {
+            margin-top: 0;
+        }
+    }
+
+    .infobox {
+        margin-bottom: 15px;
+        @media #{$lg} {
+            margin-bottom: 30px;
+        }
+    }
+}

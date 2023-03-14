@@ -1,0 +1,337 @@
+@import "./components/colors.scss";
+@import "./components/responsiveBreakpoints.scss";
+body,
+html {
+    margin: 0;
+    // overflow-x: hidden;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $navy;
+}
+*:active,
+*:focus {
+    outline: none;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.noMobi {
+    display: none;
+
+    @media #{$sm} {
+        display: block;
+    }
+}
+
+@keyframes wobbleRight {
+    40% {
+        transform: translateX(25%) rotate(0.05deg);
+    }
+    60% {
+        transform: translateX(0%) rotate(0.05deg);
+    }
+    75% {
+        transform: translateX(10%) rotate(0.05deg);
+    }
+    100% {
+        transform: translateX(0%) rotate(0.05deg);
+    }
+}
+
+@keyframes wobbleLeft {
+    40% {
+        transform: translateX(-25%) rotate(0.05deg);
+    }
+    60% {
+        transform: translateX(0%) rotate(0.05deg);
+    }
+    75% {
+        transform: translateX(-10%) rotate(0.05deg);
+    }
+    100% {
+        transform: translateX(0%) rotate(0.05deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes intro {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes introOpacityOnly {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media #{$md} {
+        width: 737px;
+    }
+    @media #{$lg} {
+        width: 962px;
+    }
+    @media #{$xl} {
+        padding: 0;
+        width: 1060px;
+    }
+}
+
+.narrowContainer {
+    max-width: 100%;
+    width: 100%;
+
+    @media #{$sm} {
+        width: 460px;
+        max-width: 100%;
+    }
+}
+
+.kDatePicker {
+    .isRequired {
+        font-size: 70%;
+        font-weight: 600;
+        margin-left: 5px;
+        color: $red;
+        display: inline-flex;
+        align-items: center;
+        line-height: 1em;
+        position: relative;
+        opacity: 0.5;
+
+        span {
+            font-size: 150%;
+        }
+
+        .isRequiredText {
+            display: none;
+            background: $red;
+            color: $white;
+            padding: 3px 5px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: absolute;
+            left: 100%;
+        }
+
+        &:hover {
+            opacity: 1;
+            .isRequiredText {
+                display: block;
+            }
+        }
+    }
+}
+.flex {
+    display: flex;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+.stdDashboardHeader {
+    font-size: $text-header;
+    // font-weight: 900;
+    margin: 0 0 1.66em;
+    color: $navy;
+}
+.dashboardIntroduce {
+    margin-bottom: 40px;
+}
+.stdHeader {
+    font-weight: 800;
+    color: $navy;
+    font-size: $text-header;
+    line-height: 1.5em;
+    margin: 0 0 1.66em;
+}
+.mediumHeader {
+    font-weight: $text-medium-header;
+    &.blue {
+        color: $blue;
+    }
+}
+.dashBrdHeader {
+    position: relative;
+    font-weight: 500;
+    color: $navy;
+    font-size: $text-header;
+    line-height: 1.5em;
+    margin: 0 0 1.66em;
+    span {
+        display: inline-block;
+        background: #fff;
+        padding-right: 15px;
+    }
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed rgba($color: $navy, $alpha: 0.3);
+        content: "";
+        z-index: -1;
+    }
+    strong {
+        text-transform: uppercase;
+        &.blue {
+            color: $blue;
+        }
+    }
+}
+.textCenter {
+    text-align: center;
+}
+.customList {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    font-size: $text-small;
+    line-height: 2.6em;
+    font-weight: 500;
+
+    &.dashList {
+        li {
+            position: relative;
+            padding-left: 10px;
+            &::after {
+                position: absolute;
+                top: 15px;
+                left: 0;
+                width: 4px;
+                height: 1px;
+                background-color: rgba($color: $navy, $alpha: 0.4);
+                content: "";
+            }
+        }
+    }
+    &.numberList {
+        li {
+            position: relative;
+            padding-left: 25px;
+            span {
+                position: absolute;
+                top: 0.5rem;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: $text-super-small;
+                line-height: 17px;
+                text-align: center;
+                border: 1px dashed rgba($color: $navy, $alpha: 0.3);
+            }
+        }
+    }
+}
+
+.loadingCircle {
+    width: 20px;
+    height: 20px;
+    border: 4px solid $lblue;
+    border-top: 4px solid $blue;
+    border-radius: 100rem;
+    animation: spin 1s linear infinite;
+}
+
+.errorViewOops {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    box-sizing: border-box;
+
+    .error {
+        color: $red;
+        font-weight: 600;
+        text-align: center;
+        font-size: $text-medium;
+        padding: 35px 0;
+        box-sizing: border-box;
+    }
+
+    .btns {
+        display: flex;
+
+        .kBtn {
+            flex: 1;
+            margin-right: 10px;
+
+            .kBtnInner {
+                .leftIcon {
+                    min-width: 30px;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@keyframes iconEntry {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    40% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    60% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#fc_frame {
+    display: none;
+    @media #{$lg} {
+        display: block;
+    }
+}
+#callpageWrapper {
+    display: none;
+    @media #{$lg} {
+        display: block;
+    }
+}

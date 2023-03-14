@@ -1,0 +1,41 @@
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+
+.headerBar {
+    padding: 5px 15px;
+    text-align: center;
+    color: #fff;
+    font-size: $text-medium;
+    font-weight: 500;
+    background: rgb(13, 156, 226);
+    background: linear-gradient(
+        0deg,
+        rgba(13, 156, 226, 1) 39%,
+        rgba(17, 114, 219, 1) 100%
+    );
+    .headerBarContent {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 0 0 10px;
+            display: inline-block;
+            @media #{$md} {
+                margin: 0;
+            }
+        }
+        .kBtn {
+            margin: 0 30px;
+        }
+        // a {
+        //     display: inline-block;
+        //     padding: 5px 15px;
+        //     background-color: #ffa513;
+        //     color: #fff;
+        //     border-radius: 3px;
+        //     margin: 0 15px;
+        //     text-decoration: none;
+        // }
+    }
+}

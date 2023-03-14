@@ -1,0 +1,199 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.dashboardHistory {
+  .tabIntroduce {
+    margin-bottom: 30px;
+
+    p {
+      line-height: 1.6em;
+    }
+    .contentImg {
+      display: none;
+      @media #{$xl} {
+        display: block;
+      }
+      img {
+        display: inline-block;
+      }
+    }
+    .walletContentImg {
+      max-width: 82px;
+      @media #{$xl} {
+        max-width: 40%;
+      }
+    }
+    .walletContentImg2 {
+      @media #{$xl} {
+        max-width: 78%;
+        padding-left: 30px;
+        box-sizing: border-box;
+      }
+    }
+    .paymentcardsContentImg {
+      @media #{$xl} {
+        max-width: 50%;
+      }
+    }
+    .paymentProcessors {
+      display: inline-block;
+      vertical-align: top;
+      @media #{$xl} {
+        max-width: 65%;
+        padding-left: 15px;
+        box-sizing: border-box;
+      }
+      .tooltipWrapper {
+        display: inline-block;
+      }
+      img {
+        box-sizing: border-box;
+        padding: 5px;
+        filter: grayscale(1);
+        max-width: 78px;
+        &:hover,
+        &.active {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+.historyListRow {
+  max-width: 100%;
+  overflow-y: scroll;
+  @media #{$xl} {
+    overflow-y: visible;
+    width: auto;
+  }
+  .historyListTable {
+    min-width: 680px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    @media #{$lg} {
+      width: 100%;
+    }
+  }
+}
+.historyListHeader {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: $text-small;
+  color: rgba($navy, 0.5);
+  font-weight: 600;
+  margin-bottom: 9px;
+  padding: 0 10px;
+  .historyListCol {
+    flex: 1 1;
+    &:last-child {
+      text-align: right;
+    }
+    &.time {
+      flex-grow: 0.3;
+    }
+  }
+}
+.historyListBody {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  .box-placeholder-wrapper {
+    flex-basis: 100%;
+  }
+
+  .listItemRow {
+    flex-flow: row wrap;
+    overflow: hidden;
+    max-height: 25px;
+    border-radius: 25px;
+    transition: max-height 0.3s;
+    cursor: pointer;
+    &.show {
+      max-height: 500px;
+      background-color: #f0f3f8;
+    }
+  }
+
+  .listItemRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-bottom: 7px;
+    width: 100%;
+    font-size: $text-small;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px $lblue2;
+    font-weight: 600;
+    text-decoration: none;
+    color: $navy;
+    &:hover {
+      background-color: $lblue2;
+    }
+    .historyListCol {
+      flex: 1 1;
+      &:last-child {
+        text-align: right;
+      }
+      &.time {
+        flex-grow: 0.3;
+      }
+      &.date {
+        display: flex;
+        span {
+          align-self: center;
+          font-size: $text-medium;
+        }
+      }
+      &.pair {
+        display: flex;
+        span {
+          align-self: center;
+          margin: 0 5px;
+          border-radius: 50rem;
+          padding: 2px 5px;
+          font-weight: 600;
+          font-size: 6px;
+
+          text-transform: uppercase;
+          line-height: 1em;
+          &.sell {
+            color: #fff;
+            background-color: $red;
+          }
+          &.buy {
+            background-color: $green;
+          }
+        }
+      }
+      &.amount {
+        span {
+          color: rgba($navy, 0.5);
+        }
+      }
+      &.price {
+        span {
+          color: rgba($navy, 0.5);
+        }
+      }
+      &.priceAmount {
+        span {
+          color: rgba($navy, 0.5);
+        }
+      }
+    }
+  }
+}
+
+.MuiPickersToolbar-toolbar {
+  background: #4f54e4!important;
+}
+.MuiButton-textPrimary {
+  color: #5055fa!important;
+}
+.MuiPickersDay-daySelected, .MuiPickersDay-daySelected:hover {
+  background: #4f54e4!important;
+}

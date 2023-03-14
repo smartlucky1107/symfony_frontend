@@ -1,0 +1,45 @@
+@import "../../../../colors.scss";
+@import "../../../../responsiveBreakpoints";
+
+.generateHistoryFile {
+    .MuiFormControl-root {
+        max-width: 140px;
+    }
+    .info {
+        font-size: 11px;
+    }
+    .selectOwnPeriod {
+        display: flex;
+        flex-flow: row wrap;
+
+        label {
+            color: rgba($navy, 0.5);
+            font-size: $text-super-small;
+            margin-right: 12px;
+            max-width: 130px;
+        }
+    }
+    .kBtn {
+        margin-top: 1em;
+    }
+    .selectWrapper {
+        margin-bottom: 1em;
+    }
+    .kSelect {
+        justify-content: flex-start;
+        .selectedElement {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            display: block;
+            background: $white;
+            color: #000;
+            text-decoration: none;
+            border: 2px solid #f0f3f8;
+            border-radius: 5px;
+            padding: 8px 14px;
+            box-sizing: border-box;
+            margin: 0;
+            transition: all 0.1s ease-in;
+        }
+    }
+}

@@ -1,0 +1,297 @@
+// @import "../../colors.scss";
+// @import "../../responsiveBreakpoints.scss";
+
+
+@import "../../colors.scss";
+@import "../../responsiveBreakpoints.scss";
+.mainPage {
+    overflow-x: hidden;
+}
+.forPartnersPage {
+    .imgOffset {
+        margin-top: 1em;
+        @media #{$xl} {
+            margin-top: 0;
+        }
+    }
+}
+.mt1{
+    margin-top: 1rem;
+}
+.btn1, .btn1:hover{
+    border-radius: 8px;
+    background: linear-gradient(
+   180deg, #7175f3 0%, #4f54e4 80%);
+    border: 1px solid #4f54e4;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffff!important;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar{
+  width:100%;
+  display:flex;
+
+  .kBtn{
+    flex:1;
+    background:transparent;
+    box-shadow:none;
+    color:$lnavy;
+    opacity:0.6;
+    padding:20px 25px;
+    border:none;
+
+    &:hover{
+      opacity:1;
+    }
+
+    .kBtnInner{
+      justify-content: center;
+
+      .leftIcon{
+        min-width:30px;
+        width:30px;
+        flex:none;
+
+        span{
+          font-weight:500;
+          font-size:$text-large;
+        }
+      }
+      .text{
+        font-weight:600;
+        text-transform: uppercase;
+        font-size:$text-medium;
+      }
+    }
+
+    &.active{
+      background:$white;
+      color:$blue;
+      border-radius: 15px 15px 0 0;
+      box-shadow:0px -15px 20px $lblue;
+      opacity:1;
+      position:relative;
+      border:none;
+
+      &:hover{
+        color:$blue;
+      }
+    }
+  }
+}
+.h-center{
+    justify-content: center;
+}
+.mt1{
+ margin-top: 1rem;
+}
+.tabBtnactive, .tabBtnactive:hover{
+    background: #e6e7fc;
+    border: 1px solid #7175f3;
+    color: #7175f3;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.w65{
+  width: 65%;
+}
+.w65:hover{
+    width: 65%;
+  }
+.tabdiv{
+    display: flex;
+    width: 330px;
+    justify-content: space-evenly;
+}
+.tabBtnInactive, .tabBtnInactive:hover{
+    border-radius: 5px;
+    color: #575ce8;
+    background-color: #fff;
+}
+.ml-2{
+    margin-left: 2rem;
+}
+.mt-3{
+    margin-top: 3rem!important;
+}
+.mt-4{
+  margin-top: 4rem!important;
+}
+.count-main-box{
+    // box-shadow: 0px 0 30px rgb(1 41 112 / 8%);
+    box-shadow: 0px 0px 50px #e7ebf3;
+    padding: 15px;
+    border-radius: 10px;
+}
+.count-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+}
+.count-box img{
+  width: 80px;
+}
+.count-box h4{
+  margin: 2px 0;
+  font-weight: bold;
+  color: black;
+}
+.count-box p {
+  padding: 0px;
+  margin: 0;
+  font-size: 14px;
+  color: #888dff;
+}
+.count-box-sub h4{
+  margin: 5px 0;
+}
+.count-box-sub p {
+  color: #888dff;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.count-box-sub {
+  padding-left: 20px;
+}
+.mapcrypto .cryptocurrencyOverviewAllContainer{
+ margin-top: 0!important;
+}
+.cryptocurrencyOverviewAllContainer{
+  margin-top: 0!important;
+}
+@media only screen and (min-width: 992px){
+.cryptocurrencyOverviewAllContainer .container .cryptocurrencyOverviewSingleSmall {
+     flex-basis: 100%!important;
+     margin-right: 0!important;
+  }
+}
+.kBtn {
+  border-radius:8px!important;
+}
+.kBtn.blue {
+  background: linear-gradient(
+    180deg, #7175f3 0%, #4f54e4 80%);
+}
+.kBtn:hover{
+  background: linear-gradient(
+   180deg, #7175f3 0%, #4f54e4 80%);
+    // border: 1px solid #4f54e4;
+    color: #fff; 
+}
+
+@media only screen and (min-width: 767px){
+.tabss .sellBuySidebar {
+     position: relative!important; 
+     width: auto; 
+     right: 0%; 
+     left: auto; 
+     flex-direction: unset!important; 
+     display: inline-block!important;
+     margin-bottom: 2rem;
+}
+}
+.sendMail{
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+.sendMail button{
+    background: linear-gradient( 
+    180deg, #7175f3 0%, #4f54e4 80%);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 0px 2px 2px 0px!important;
+    width: 60px;
+    border-color: #7175f3;
+    border: 1px;
+    padding: 3px;
+    cursor: pointer;
+}
+.mailinput{
+  min-height: 30px;
+  width: 50%;
+  padding-left: 20px;
+}
+input.mailinput:focus {
+  border-color: #7175f3;
+  border: 2px solid#7175f3;
+}
+.tabss .sellBuySidebar {
+  position: relative!important; 
+  width: auto; 
+  right: 0%; 
+  left: auto; 
+  flex-direction: unset!important; 
+  display: inline-block!important;
+  margin-bottom: 2rem;
+}
+.tabss .sellBuySidebar .kBtn{
+  margin: 5px !important;
+  padding: 10px 42px;
+}
+.tabss{
+  width: 70%;
+  text-align: center;
+}
+.kBtn.active {
+  cursor: pointer;
+  color: #2684fe;
+  background: #ffffff;
+  border: 0px!important;
+  box-shadow: 0 0 0 1px #5e62ec;
+  color: #5257e6;
+}
+.kInput label {
+  color: #5055fa;
+}
+.timerBar .timerBarInside {
+  width: 0%;
+  background: #4f54e4;
+  height: 100%;
+}
+.buyStep1.homepageTransaction .kInput .kInputInside {
+  box-shadow: 0px 0px 50px #e6eeff;
+}
+.sellStep1.homepageTransaction .kInput .kInputInside {
+  box-shadow: 0px 0px 50px #e6eeff;
+}
+.allMenus.active {
+  background: #fff;
+}
+.tabs .tabsHeader .tabsHeaderHelper .tab.active {
+  // color: #5e62ec!important; 
+  color: #787cff!important;
+  border-radius: 10px 10px 0 0!important;
+}
+.subPage ol li, .feesPage ol li, .termsPage ul li {
+  margin-bottom: 1em;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.feesPage table tr td {
+  padding: 5px 10px;
+  border: 1px solid rgba(16, 37, 59, 0.3);
+  font-size: 13px;
+}
+.subPage .sectionText_defaultSection p {
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+  text-align: justify;
+  font-size: 13px;
+}
+p, .subPage .sectionText_miniSection p, .subPage .subPage_SectionText ul li {
+  font-size: 13px!important;
+  line-height: 1.7!important;
+}
+.just-center{
+  justify-content: center!important;
+}
+.headerWrapper .header .container .hamburger.active {
+  color: #6d71ee;
+}

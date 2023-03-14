@@ -1,0 +1,77 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+.loginPage{
+    .container{
+        // display:flex;
+        // justify-content: center;
+        // align-items: center;
+
+        .narrowContainer{
+            margin:30px 0;
+
+            @media #{$sm}{
+                margin:60px 0;
+            }
+
+            .isNotLoggedIn{
+                box-shadow:0px 0px 30px $lblue;
+                border-radius: 15px;
+
+                .kBtn{
+                    &.blue{
+                        width:100%;
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 13px 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+.infobox {
+    width: 100%;
+    color: #4046ff;
+    background: rgba(108, 113, 255, 0.2);
+}
+.isNotLoggedIn .content .registerBox .registerBtn {
+    flex: none!important;
+}
+.isNotLoggedIn .content .registerBox{
+    background: #e6e7fc!important;
+}
+.imgBlock{
+    max-width: 400px;
+    padding: 0px 60px;
+}
+.centerbox{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.imgdiv{
+   background: #e6e7fc !important;
+    margin-top: 60px;
+    margin-right: 10px;
+    margin-bottom: 60px;
+}
+
+
+
+// media
+@media only screen and (max-width: 600px) {
+.centerbox {
+    margin: 0;
+    position: relative;
+    top: unset; 
+    transform: unset;
+}
+.flexno{
+    display: block!important;  
+}
+
+}

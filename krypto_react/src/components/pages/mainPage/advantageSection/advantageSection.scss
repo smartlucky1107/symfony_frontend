@@ -1,0 +1,42 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+.advantageSection {
+  .content {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: $text-small;
+    line-height: 2.6em;
+    margin: 0 -15px;
+    .col {
+      padding: 0 15px;
+      flex-basis: 100%;
+      box-sizing: border-box;
+      @media #{$md} {
+        flex-basis: 50%;
+      }
+    }
+    .contentBox {
+      position: relative;
+      padding-left: 90px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      @media #{$md} {
+        padding-left: 110px;
+      }
+      @media #{$lg} {
+        margin-bottom: 56px;
+      }
+      .contentIconBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .title {
+        font-size: $text-medium;
+        line-height: 1.3em;
+        font-weight: 600;
+        margin: 0 0 1em;
+      }
+    }
+  }
+}

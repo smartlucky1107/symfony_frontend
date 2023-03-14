@@ -1,0 +1,62 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.workerTile {
+    box-sizing: border-box;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 0px 20px $lblue2;
+    padding: 15px;
+    max-width: auto;
+    margin-bottom: 18px;
+    font-size: $text-small;
+    font-weight: 600;
+    @media #{$sm} {
+        max-width: 243px;
+    }
+    .row {
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .goToBtn,
+    .rmvBtn {
+        display: flex;
+        align-items: center;
+        // padding: 10px 18px;
+        font-weight: 500;
+        font-size: $text-super-small;
+        .material-icons {
+            font-size: $text-medium;
+            margin-left: 10px;
+        }
+    }
+    .goToBtn {
+        color: $blue;
+        text-decoration: none;
+        position: relative;
+        padding: 5px 15px 5px 0px;
+        // &::after {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     width: 1px;
+        //     height: 100%;
+        //     content: "";
+        //     background-color: rgba($navy, 0.2);
+        // }
+    }
+    .rmvBtn {
+        background-color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    // .rmvBtn {
+    //     // padding: 10px 18px;
+    //     font-weight: 500;
+    //     font-size: $text-super-small;
+    // }
+}

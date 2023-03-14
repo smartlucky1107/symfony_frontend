@@ -1,0 +1,64 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.dashboardWelcome {
+}
+@media only screen and (min-width: 767px){
+.walletsToggleListContent .walletsBox .walletsListHeader .wrapper {
+    flex-basis: 55%!important;
+}
+}
+@media only screen and (min-width: 1200px){
+.walletsToggleListContent .walletsBox .walletsList .wallet .wraper {
+    flex-basis: 55%!important;
+}
+}
+.cstCard{
+    background-color: #000;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 15px;
+    color: #f1f1f1;
+    font-weight: lighter;
+}
+.toppart, .bottompart{
+    display: flex;
+    justify-content: space-between;
+}
+.toppart h3, .toppart h4{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.bottompart h3{
+    align-self: end;
+    font-weight: 500;
+    font-size: 14px;
+}
+.expirecard{
+    display: flex;
+    align-items: center;
+}
+.expirecard h5{
+    font-weight: 500;
+    margin: 14px 0px;
+}
+.degits h3{
+    margin: 8px 0px 0px 0px;
+    font-weight: 500;
+}
+.w-60{
+    width: 60px;
+}
+.dashBox{
+    border: 2px solid #6d71ee;
+    border-radius: 8px;
+    border-style: dashed;
+    margin-top: 1rem;
+    padding: 5px;
+    text-align: center;
+}
+.dashBox p{
+    font-size: 14px!important;
+    font-weight: 600;
+    margin: 8px;
+}

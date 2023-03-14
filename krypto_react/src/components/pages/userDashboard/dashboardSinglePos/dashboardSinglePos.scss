@@ -1,0 +1,53 @@
+@import "./../../../colors.scss";
+@import "./../../../responsiveBreakpoints.scss";
+
+.dashboardSinglePos {
+    .row {
+        .col {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+
+            @media #{$lg} {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        // .col {
+        //     flex-basis: 100%;
+        //     box-sizing: border-box;
+
+        //     @media #{$md} {
+        //         flex-basis: 50%;
+        //         &:first-child {
+        //             padding-right: 15px;
+        //         }
+        //         &:last-child {
+        //             padding-left: 15px;
+        //         }
+        //     }
+        //     @media #{$xl} {
+        //         &:first-child {
+        //             padding-right: 30px;
+        //         }
+        //         &:last-child {
+        //             padding-left: 30px;
+        //         }
+        //     }
+        // }
+    }
+    .content {
+        margin-bottom: 15px;
+    }
+    .offsetTop {
+        margin-top: 30px;
+    }
+    .tooltipWrapper {
+        display: inline-block;
+    }
+    .infobox {
+        margin-bottom: 15px;
+    }
+}

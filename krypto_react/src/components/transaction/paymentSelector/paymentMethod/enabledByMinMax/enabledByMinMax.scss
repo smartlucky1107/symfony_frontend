@@ -1,0 +1,56 @@
+@import "./../../../../colors";
+@import "./../../../../responsiveBreakpoints";
+
+.enabledByMinMax{
+    background:rgba($white, 0.5);
+    padding:10px;
+    margin-left:20px;
+    box-sizing:border-box;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:rgba($red, 0.05);
+    border-radius:5px;
+    flex-basis: calc(100% - 100px);
+    text-align: center;
+
+    .enabledByMinMaxText{
+        color:$red;
+        border-radius:100rem;
+        font-size:$text-small;
+        font-weight:600;
+        padding:3px 5px;
+        box-sizing: border-box;
+    }
+    .enabledByMinMaxValues{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        .valuesText{
+            color:$navy;
+            font-size:$text-super-small;
+            font-weight:500;
+        }
+        .values{
+            font-size:$text-small;
+            font-weight:600;
+
+            span{
+                font-size:70%;
+                margin-left:2px;
+            }
+        }
+    }
+}
+
+.paymentMethod{
+    &.disabled{
+        .enabledByMinMax{
+            filter: blur(2px);
+            opacity:0.2;
+        }
+    }
+}

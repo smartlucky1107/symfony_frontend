@@ -1,0 +1,35 @@
+@import "../../../colors";
+@import "../../../responsiveBreakpoints";
+
+.cryptocurrencyOverviewAllContainer{
+  width:100%;
+  margin: 100px 0;
+
+  .container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .cryptocurrencyOverviewSingleSmall{
+      flex-basis:100%;
+      box-sizing:border-box;
+      margin-bottom:25px;
+
+      @media #{$lg}{
+        flex-basis: calc(33.333333% - 30px);
+        margin-right:45px;
+        margin-bottom:45px;
+      }
+
+      &:nth-child(3n){
+        margin-right:0;
+      }
+    }
+
+    .row{
+      justify-content: center;
+      .material-icons{
+      }
+    }
+  }
+}

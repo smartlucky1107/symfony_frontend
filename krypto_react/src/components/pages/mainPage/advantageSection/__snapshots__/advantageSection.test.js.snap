@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Advantage Section component Should correctly render component 1`] = `
+<DocumentFragment>
+  <section
+    class="container advantageSection"
+  >
+    <header>
+      <h1
+        class="dashBrdHeader"
+      >
+        <span>
+           
+          <strong
+            class="blue"
+          />
+           
+        </span>
+      </h1>
+    </header>
+    <div
+      class="content"
+    />
+  </section>
+</DocumentFragment>
+`;

@@ -1,0 +1,15 @@
+section {
+    padding: 40px 0;
+    overflow: hidden;
+}
+/* .pt-5 {
+    padding-top: 3rem!important;
+} */
+.themeCard {
+    box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
+    padding: 2rem!important;
+    border-radius: 10px;
+}
+.lightblue {
+    color: #4f54e4;
+}

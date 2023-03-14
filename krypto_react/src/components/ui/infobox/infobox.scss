@@ -1,0 +1,106 @@
+@import "./../../colors";
+@import "./../../responsiveBreakpoints";
+
+@keyframes wobble {
+    0% {
+        transform: translateX(0%);
+    }
+    15% {
+        transform: translateX(-5%) rotate(-3deg);
+    }
+    30% {
+        transform: translateX(2.5%) rotate(2deg);
+    }
+    45% {
+        transform: translateX(-1.75%) rotate(-1deg);
+    }
+    60% {
+        transform: translateX(0.8%) rotate(1deg);
+    }
+    75% {
+        transform: translateX(-0.4%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-30px) scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.infobox {
+    width: 100%;
+    color: $blue;
+    background: rgba($blue, 0.2);
+    border: 1px solid rgba($blue, 0.15);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: $text-small;
+    position: relative;
+    //font-weight:600;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.4em;
+
+    //Types
+    &.error {
+        background: rgba($red, 0.2);
+        border-color: rgba($red, 0.15);
+        color: $red;
+    }
+    &.warning {
+        background: rgba($yellow, 0.2);
+        border-color: rgba($yellow, 0.15);
+        color: darken($yellow, 20%);
+    }
+    &.success {
+        background: rgba($green, 0.2);
+        border-color: rgba($green, 0.15);
+        color: darken($green, 20%);
+    }
+    &.gray {
+        background: rgba($lnavy, 0.2);
+        border-color: rgba($lnavy, 0.15);
+        color: darken($lnavy, 20%);
+    }
+
+    //Font sizes
+    &.medium {
+        font-size: $text-medium;
+    }
+    &.big {
+        font-size: $text-big;
+    }
+
+    //Animations
+    &.wobble {
+        animation: wobble 0.5s ease-in-out;
+    }
+    &.slide-in-top {
+        animation: slide-in-top 0.5s ease-in-out;
+    }
+
+    //Icons
+    .infoboxIcon {
+        padding: 0 10px 0 3px;
+        display: flex;
+    }
+    .infoboxText {
+        flex: 1;
+        .material-icons {
+            font-size: $text-medium;
+            padding: 0 15px;
+        }
+    }
+}

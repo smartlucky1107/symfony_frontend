@@ -1,0 +1,10 @@
+@import "../../../../colors.scss";
+@import "../../../../responsiveBreakpoints.scss";
+
+.accountDataContent {
+    .flexTable {
+        .ftRow {
+            border-top: none !important;
+        }
+    }
+}

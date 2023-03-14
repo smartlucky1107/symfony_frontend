@@ -1,0 +1,18 @@
+@import "./../../../colors";
+@import "./../../../responsiveBreakpoints";
+
+.businessRegistration {
+    .kSelect {
+        margin-bottom: 15px;
+        .selectedElement {
+            position: relative;
+            display: flex;
+            border-radius: 5px;
+            border: 2px solid #f0f3f8;
+            box-sizing: border-box;
+            transition: all 0.25s ease-in-out;
+            justify-content: center;
+            padding: 12px 14px;
+        }
+    }
+}

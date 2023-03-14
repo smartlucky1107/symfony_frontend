@@ -1,0 +1,20 @@
+@import "./../../../../colors";
+@import "./../../../../responsiveBreakpoints";
+
+.referralCodeOnly {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .referralCodeOnlyLabel {
+        font-size: $text-small;
+        text-align: right;
+        flex: 1;
+        padding: 0 5px;
+    }
+
+    .referralCodeOnlyInputBox {
+        flex-basis: 180px;
+    }
+}

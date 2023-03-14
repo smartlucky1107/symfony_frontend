@@ -1,0 +1,147 @@
+@import "./../../colors.scss";
+@import "./../../responsiveBreakpoints.scss";
+
+.tabs {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    .show-tabs {
+        position: absolute;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        @media #{$md} {
+            display: none;
+        }
+        .material-icons {
+            line-height: 1em;
+        }
+    }
+    .tabsHeader {
+        height: 56px;
+        overflow: hidden;
+        margin-left: 60px;
+        @media #{$md} {
+            margin-left: 0;
+        }
+        &.show {
+            overflow: visible;
+            .tabsHeaderHelper {
+                border-left: 1px dashed rgba($navy, 0.3);
+                border-right: 1px dashed rgba($navy, 0.3);
+                border-bottom: 1px dashed rgba($navy, 0.3);
+                z-index: 10;
+            }
+        }
+        .tabsHeaderHelper {
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            border: 1px solid transparent;
+            @media #{$md} {
+                display: block;
+            }
+
+            .tab {
+                // flex: 1;
+                background: #fff;
+                box-shadow: none;
+                color: $lnavy;
+                padding: 20px 15px;
+                border: none;
+                cursor: pointer;
+                z-index: 1;
+                order: 2;
+                @media #{$md} {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    background: transparent;
+                    opacity: 0.6;
+                }
+
+                @media #{$xl} {
+                    padding: 20px 25px;
+                }
+
+                &:hover {
+                    opacity: 1;
+                    .icon {
+                        span {
+                            animation: wobbleRight 0.5s ease-in-out;
+                        }
+                    }
+                }
+                &:focus {
+                    outline: none;
+                }
+                &.active {
+                    background: $white;
+                    color: $blue;
+                    // border-radius: 15px 15px 0 0;
+                    border-radius: 5px 5px 0 0;
+                    box-shadow: 0px -15px 20px $lblue;
+                    opacity: 1;
+                    border-top:1px solid;
+                    // position: relative;
+                    order: 1;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+
+                .innerTab {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        text-align: right;
+                        width: 25px;
+                        @media #{$xl} {
+                            width: 50px;
+                        }
+                        span {
+                            font-size: 100%;
+                            font-weight: 400;
+                            width: 100%;
+                        }
+                    }
+                    .material-icons {
+                        font-size: $text-large;
+                    }
+                    .text {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        // font-size: $text-medium;
+                        font-size: 13px;
+                        letter-spacing: 0.3px;
+                    }
+                }
+            }
+        }
+    }
+    .tabsContent {
+        width: 100%;
+        box-shadow: 0px 0px 30px $lblue;
+        border-radius: 0 5px 5px 5px;
+        border-radius: 0 15px 15px 15px;
+        box-sizing: border-box;
+
+        .tabContent {
+            padding: 30px 15px 40px;
+            display: none;
+            border-radius: 0 5px 5px 5px;
+            box-sizing: border-box;
+            @media #{$md} {
+                padding: 30px 30px 40px;
+            }
+            &.active {
+                display: block;
+                background-color: #fff;
+            }
+        }
+    }
+}
